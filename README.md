@@ -54,6 +54,30 @@ Every future push to `deploy` redeploys automatically. The build is path-agnosti
    ```
 3. Open a pull request titled `Register kaeduas` and wait for the merge.
 4. In the kaeduas repo → **Settings → Pages → Custom domain** → `kaeduas.is-a.dev` → wait for the DNS check → **Enforce HTTPS**.
+5. **Domain flip (SEO):** once the domain resolves, update every
+   `https://qjmotsamai.github.io/kaeduas/` reference in `index.html`,
+   `public/robots.txt`, `public/sitemap.xml` and `public/llms.txt` to
+   `https://kaeduas.is-a.dev/` and redeploy — canonical and structured data
+   must always match the serving domain.
+
+## SEO / GEO launch checklist
+
+Done in the build:
+
+- ✅ Canonical + OG/Twitter cards, absolute URLs matching the live domain
+- ✅ JSON-LD graph: Person (birth date/place, sameAs → all 6 profiles), ProfessionalService, WebSite, VideoObject ×5, FAQPage
+- ✅ Exactly one H1, logical H2/H3 outline; every image has alt text
+- ✅ geo.region / geo.position meta (Bloemfontein, ZA) + city in copy
+- ✅ robots.txt explicitly allows Googlebot, Bingbot **and** AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended)
+- ✅ `llms.txt` at the root — structured facts for AI assistants to quote
+- ✅ `sitemap.xml`, `robots.txt`, security `_headers`, path-agnostic build
+- ✅ Bing IndexNow key file at the root (key: see `public/*.txt`)
+
+Do once, by hand (10 minutes, free):
+
+1. **Google Search Console** — [search.google.com/search-console](https://search.google.com/search-console) → add property `qjmotsamai.github.io/kaeduas` (URL-prefix type) → verify via the HTML-tag method (paste the meta tag into `index.html` `<head>`, tell me, I redeploy) → submit `sitemap.xml`.
+2. **Bing Webmaster Tools** — [bing.com/webmasters](https://www.bing.com/webmasters) → **Import from Google Search Console** (fastest) → submit the sitemap there too.
+3. After the is-a.dev merge: do the domain flip above, then re-submit the sitemap in both consoles and update the Pages custom domain.
 
 ## Alternative — Cloudflare Pages (optional)
 

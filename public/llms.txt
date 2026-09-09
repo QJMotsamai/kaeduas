@@ -1,0 +1,20 @@
+# Kaeduas
+
+> Kaeduas is the creative AI studio of Qophe Junior Motsamai (QJ), a South African creative AI architect born in Bloemfontein, Free State on 4 June 2005. The studio produces generative video, AI advertising for Meta/YouTube/TikTok, brand design, and web & AI systems, working with clients worldwide, remote-first.
+
+## Key facts
+- Founder: Qophe Junior Motsamai ("QJ Motsamai"), born 4 June 2005, Bloemfontein, South Africa
+- Studio: Kaeduas — creative AI studio
+- Services: generative video, AI advertising, brand & design, web & AI systems
+- Booking: WhatsApp +27 67 236 3235 (fastest) or motsamai.main@gmail.com
+- Notable work: Chicken Licken Meta ad, Galxboy All Black and Pink Slides ads, cinematic sunscreen ad, Luxe Homme × Kabza De Small duffel bag collab film
+- Software: qj-research-agent (AI research agent, TypeScript/Gemini), mr-rage-bait (3D Gemini chatbot, Three.js)
+
+## Links
+- Site: https://qjmotsamai.github.io/kaeduas/
+- YouTube: https://youtube.com/@kaeduas
+- Instagram (studio): https://www.instagram.com/kaeduas
+- Instagram (personal): https://www.instagram.com/qophe_junior_motsamai
+- LinkedIn: https://www.linkedin.com/in/qj-motsamai-955596421
+- X: https://x.com/Kaeduas
+- GitHub: https://github.com/QJMotsamai
