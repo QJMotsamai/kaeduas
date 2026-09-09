@@ -47,7 +47,7 @@ const og = `
   <rect width="1200" height="630" fill="url(#glow)"/>
 
   <!-- stacked layers, top right, brand staircase geometry -->
-  <g transform="translate(830,58)" opacity="0.98">
+  <g transform="translate(773,58)" opacity="0.98">
     <rect x="0"   y="0"   width="310" height="36" rx="2" fill="#E5703C"/>
     <rect x="39"  y="58"  width="310" height="36" rx="2" fill="#C2531F"/>
     <rect x="78"  y="116" width="310" height="36" rx="2" fill="#9E3F1E"/>
