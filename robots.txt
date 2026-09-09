@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kaeduas.is-a.dev/sitemap.xml

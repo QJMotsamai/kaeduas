@@ -1,2129 +1,512 @@
 <!DOCTYPE html>
-<html lang="en-ZA">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaeduas — Build. Create. Entertain. Inform. Scale.</title>
-  <meta name="description" content="Kaeduas is a creative house by Qophe Junior Motsamai — generative video, design, and development work from Johannesburg, South Africa. Generative video, design, and development under one roof.">
-  <meta name="author" content="Qophe Junior Motsamai">
-  <meta name="geo.region" content="ZA-GT">
-  <meta name="geo.place_name" content="Johannesburg">
-  <meta name="geo.position" content="-26.2041;28.0404">
-  <meta name="ICBM" content="-26.2041, 28.0404">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Kaeduas — Generative Video &amp; AI Advertising Studio</title>
+  <meta name="description" content="The creative AI studio of Qophe Junior Motsamai — generative video, advertising, brand design and web systems. Born in Bloemfontein, working worldwide." />
+  <meta name="author" content="Qophe Junior Motsamai" />
+  <link rel="canonical" href="https://qjmotsamai.github.io/kaeduas/" />
+
+  <!-- GEO -->
+  <meta name="geo.region" content="ZA-FS" />
+  <meta name="geo.placename" content="Bloemfontein, Free State, South Africa" />
+  <meta name="geo.position" content="-29.0852;26.1596" />
+  <meta name="ICBM" content="-29.0852, 26.1596" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Kaeduas — Build. Create. Entertain. Inform. Scale.">
-  <meta property="og:description" content="Generative video, design, and development by Qophe Junior Motsamai. Johannesburg.">
-  <meta property="og:url" content="https://kaeduas.is-a.dev">
-  <meta property="og:image" content="https://kaeduas.is-a.dev/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Kaeduas — The Strata mark over an Ember-lit 3D scene">
-  <meta property="og:locale" content="en_ZA">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kaeduas" />
+  <meta property="og:title" content="Kaeduas — Generative Video, AI Advertising &amp; Web Systems" />
+  <meta property="og:description" content="The creative AI studio of Qophe Junior Motsamai. Ads built to stop the scroll, systems built to do real work." />
+  <meta property="og:url" content="https://qjmotsamai.github.io/kaeduas/" />
+  <meta property="og:image" content="https://qjmotsamai.github.io/kaeduas/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kaeduas — four ember-lit layers stacked in the dark, the studio mark." />
+  <meta property="og:locale" content="en_ZA" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kaeduas — Build. Create. Entertain. Inform. Scale.">
-  <meta name="twitter:description" content="Generative video, design, and development by Qophe Junior Motsamai. Johannesburg.">
-  <meta name="twitter:image" content="https://kaeduas.is-a.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kaeduas — Generative Video, AI Advertising &amp; Web Systems" />
+  <meta name="twitter:description" content="The creative AI studio of Qophe Junior Motsamai. Ads built to stop the scroll, systems built to do real work." />
+  <meta name="twitter:image" content="https://qjmotsamai.github.io/kaeduas/og-image.png" />
+  <meta name="twitter:creator" content="@Kaeduas" />
 
-  <!-- Theme -->
-  <meta name="theme-color" content="#0B0B0C">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#0A0A0B" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
 
-  <!-- Structured data -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" />
+
+  <!-- Structured data: the person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Qophe Junior Motsamai",
-    "url": "https://kaeduas.is-a.dev",
-    "image": "https://kaeduas.is-a.dev/qj-avatar.png",
-    "jobTitle": "Creative Director, Kaeduas",
-    "description": "Generative video, design, and development. Born Bloemfontein, based Johannesburg.",
-    "knowsAbout": ["Generative Video", "Creative Direction", "Design", "Web Development", "AI Art", "Advertising"],
-    "alumniOf": {
-      "@type": "Place",
-      "name": "Bloemfontein, Free State"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "South Africa"
-    },
-    "sameAs": [
-      "https://github.com/QJMotsamai",
-      "https://www.linkedin.com/in/qj-motsamai-955596421",
-      "https://www.instagram.com/qophe_junior_motsamai",
-      "https://youtube.com/@kaeduas",
-      "https://www.instagram.com/kaeduas",
-      "https://x.com/Kaeduas"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://qjmotsamai.github.io/kaeduas/#qj",
+        "name": "Qophe Junior Motsamai",
+        "alternateName": "QJ Motsamai",
+        "url": "https://qjmotsamai.github.io/kaeduas/",
+        "birthDate": "2005-06-04",
+        "birthPlace": { "@type": "Place", "name": "Bloemfontein, Free State, South Africa" },
+        "nationality": { "@type": "Country", "name": "South Africa" },
+        "jobTitle": "Founder & Creative AI Architect",
+        "worksFor": { "@id": "https://qjmotsamai.github.io/kaeduas/#studio" },
+        "description": "Qophe Junior Motsamai (QJ Motsamai) is a South African creative AI architect and founder of Kaeduas, a studio making generative video, advertising creative and web systems.",
+        "knowsAbout": ["Generative Video", "AI Advertising", "Creative Direction", "Brand Design", "Web Development", "AI Agents", "Meta Ads", "YouTube Advertising"],
+        "address": { "@type": "PostalAddress", "addressLocality": "Bloemfontein", "addressRegion": "Free State", "addressCountry": "ZA" },
+        "sameAs": [
+          "https://github.com/QJMotsamai",
+          "https://www.linkedin.com/in/qj-motsamai-955596421",
+          "https://www.instagram.com/qophe_junior_motsamai",
+          "https://www.instagram.com/kaeduas",
+          "https://youtube.com/@kaeduas",
+          "https://x.com/Kaeduas"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://qjmotsamai.github.io/kaeduas/#studio",
+        "name": "Kaeduas",
+        "url": "https://qjmotsamai.github.io/kaeduas/",
+        "logo": "https://qjmotsamai.github.io/kaeduas/icon-512.png",
+        "image": "https://qjmotsamai.github.io/kaeduas/og-image.png",
+        "founder": { "@id": "https://qjmotsamai.github.io/kaeduas/#qj" },
+        "email": "motsamai.main@gmail.com",
+        "telephone": "+27672363235",
+        "description": "Kaeduas is a creative AI studio founded by Qophe Junior Motsamai, producing generative video, advertising creative, brand design and web systems for clients worldwide.",
+        "areaServed": "Worldwide",
+        "address": { "@type": "PostalAddress", "addressLocality": "Bloemfontein", "addressRegion": "Free State", "addressCountry": "ZA" },
+        "sameAs": [
+          "https://www.instagram.com/kaeduas",
+          "https://youtube.com/@kaeduas",
+          "https://x.com/Kaeduas",
+          "https://github.com/QJMotsamai"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://qjmotsamai.github.io/kaeduas/#site",
+        "url": "https://qjmotsamai.github.io/kaeduas/",
+        "name": "Kaeduas",
+        "publisher": { "@id": "https://qjmotsamai.github.io/kaeduas/#studio" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Selected commercial and campaign work by Kaeduas",
+        "itemListElement": [
+          {
+            "@type": "ListItem", "position": 1,
+            "item": { "@type": "VideoObject", "name": "Chicken Licken — Meta ad", "description": "A fast-food meta ad cut for the scroll: quick hooks, hard cuts, brand colour everywhere.", "thumbnailUrl": "https://i.ytimg.com/vi/BEslIFlN4oI/maxresdefault.jpg", "embedUrl": "https://www.youtube-nocookie.com/embed/BEslIFlN4oI", "url": "https://youtu.be/BEslIFlN4oI", "uploadDate": "2025-01-01" }
+          },
+          {
+            "@type": "ListItem", "position": 2,
+            "item": { "@type": "VideoObject", "name": "Galxboy — All Black (Meta ad)", "description": "Monochrome streetwear ad built around texture and silhouette for the Galxboy label.", "thumbnailUrl": "https://i.ytimg.com/vi/4y6gyhUDiE0/maxresdefault.jpg", "embedUrl": "https://www.youtube-nocookie.com/embed/4y6gyhUDiE0", "url": "https://youtu.be/4y6gyhUDiE0", "uploadDate": "2025-01-01" }
+          },
+          {
+            "@type": "ListItem", "position": 3,
+            "item": { "@type": "VideoObject", "name": "Galxboy — Pink Slides (Meta ad)", "description": "Product-first meta ad for Galxboy pink slides, shot and edited for paid social.", "thumbnailUrl": "https://i.ytimg.com/vi/h4Yn4rLQtwg/maxresdefault.jpg", "embedUrl": "https://www.youtube-nocookie.com/embed/h4Yn4rLQtwg", "url": "https://youtu.be/h4Yn4rLQtwg", "uploadDate": "2025-01-01" }
+          },
+          {
+            "@type": "ListItem", "position": 4,
+            "item": { "@type": "VideoObject", "name": "Sunscreen — cinematic ad", "description": "A cinematic sunscreen commercial with a slower, film-grade rhythm.", "thumbnailUrl": "https://i.ytimg.com/vi/cm3sIa6nXIA/maxresdefault.jpg", "embedUrl": "https://www.youtube-nocookie.com/embed/cm3sIa6nXIA", "url": "https://youtu.be/cm3sIa6nXIA", "uploadDate": "2025-01-01" }
+          },
+          {
+            "@type": "ListItem", "position": 5,
+            "item": { "@type": "VideoObject", "name": "Luxe Homme × Kabza De Small — duffel bag collab", "description": "Collab campaign film for the Luxe Homme × Kabza De Small duffel bag drop.", "thumbnailUrl": "https://i.ytimg.com/vi/LsKKfPNiQd8/maxresdefault.jpg", "embedUrl": "https://www.youtube-nocookie.com/embed/LsKKfPNiQd8", "url": "https://youtu.be/LsKKfPNiQd8", "uploadDate": "2025-01-01" }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Qophe Junior Motsamai?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Qophe Junior Motsamai — known as QJ — is a South African creative AI architect, born in Bloemfontein on 4 June 2005. He is the founder of Kaeduas, a creative AI studio making generative video, advertising creative and web systems." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Kaeduas do?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Kaeduas produces generative video and AI advertising for Meta, YouTube and TikTok, brand and campaign design, and web and AI systems — from portfolio sites to research agents and chatbots." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I book Kaeduas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "WhatsApp +27 67 236 3235 for the fastest response, or email motsamai.main@gmail.com with your brief. Calls are welcome on the same number." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Kaeduas based?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Kaeduas was born and raised in Bloemfontein, Free State, South Africa, and works with clients worldwide — remote-first, deadline-driven." }
+          }
+        ]
+      }
     ]
   }
   </script>
-
-  <style>
-    /* ============================================================
-       KAEDUAS — Global CSS
-       Palette, type, reset, tokens. Obey the brand book.
-       ============================================================ */
-
-    :root {
-      /* Ink family */
-      --ink: #0B0B0C;
-      --carbon: #141416;
-      --graphite: #232327;
-      --slate: #5E5E66;
-      --ash: #8A8A92;
-      --mist: #B9B9C0;
-      --bone: #F2F0EB;
-      --paper: #FAF9F6;
-
-      /* Ember */
-      --ember: #D9612F;
-      --ember-deep: #9E3F1E;
-      --ember-wash: #F5E4DC;
-
-      /* Pillar colours (wayfinding only) */
-      --pillar-build: #4A6FA5;
-      --pillar-create: #D9612F;
-      --pillar-entertain: #B8873F;
-      --pillar-inform: #5A8A72;
-
-      /* Type */
-      --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-      --font-body: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --font-serif: 'Instrument Serif', Georgia, serif;
-      --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
-
-      /* Tokens */
-      --kd-display-size: 61px;
-      --kd-display-lh: 72px;
-      --kd-display-weight: 300;
-      --kd-display-tracking: -2.5px;
-
-      --kd-h1-size: 49px;
-      --kd-h1-lh: 58px;
-      --kd-h1-weight: 300;
-      --kd-h1-tracking: -1.5px;
-
-      --kd-h2-size: 39px;
-      --kd-h2-lh: 48px;
-      --kd-h2-weight: 300;
-      --kd-h2-tracking: -1px;
-
-      --kd-h3-size: 31px;
-      --kd-h3-lh: 40px;
-      --kd-h3-weight: 400;
-      --kd-h3-tracking: -0.5px;
-
-      --kd-h4-size: 25px;
-      --kd-h4-lh: 34px;
-      --kd-h4-weight: 500;
-      --kd-h4-tracking: 0px;
-
-      --kd-h5-size: 20px;
-      --kd-h5-lh: 28px;
-      --kd-h5-weight: 600;
-      --kd-h5-tracking: 0px;
-
-      --kd-body-large-size: 18px;
-      --kd-body-large-lh: 30px;
-      --kd-body-large-weight: 400;
-
-      --kd-body-size: 16px;
-      --kd-body-lh: 27px;
-      --kd-body-weight: 400;
-
-      --kd-body-small-size: 14px;
-      --kd-body-small-lh: 23px;
-      --kd-body-small-weight: 400;
-
-      --kd-caption-size: 12px;
-      --kd-caption-lh: 18px;
-      --kd-caption-weight: 400;
-      --kd-caption-tracking: 0.3px;
-
-      --kd-overline-size: 11px;
-      --kd-overline-lh: 16px;
-      --kd-overline-weight: 600;
-      --kd-overline-tracking: 4px;
-
-      --kd-mono-size: 14px;
-      --kd-mono-lh: 22px;
-      --kd-mono-weight: 400;
-
-      --kd-wordmark-tracking: 0.62em;
-      --kd-clear-space: 17px; /* 1 bar height in 100-unit grid */
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-
-    body {
-      background: var(--ink);
-      color: var(--bone);
-      font-family: var(--font-body);
-      font-size: var(--kd-body-size);
-      line-height: var(--kd-body-lh);
-      font-weight: var(--kd-body-weight);
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    /* Selection */
-    ::selection {
-      background: var(--ember);
-      color: var(--paper);
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--carbon); }
-    ::-webkit-scrollbar-thumb { background: var(--ember-deep); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--ember); }
-
-    /* Focus */
-    :focus-visible {
-      outline: 2px solid var(--ember);
-      outline-offset: 3px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img, video {
-      display: block;
-      max-width: 100%;
-    }
-
-    /* ============================================================
-       TYPOGRAPHY UTILITIES
-       ============================================================ */
-
-    .kd-display {
-      font-family: var(--font-display);
-      font-size: var(--kd-display-size);
-      line-height: var(--kd-display-lh);
-      font-weight: var(--kd-display-weight);
-      letter-spacing: var(--kd-display-tracking);
-    }
-
-    .kd-h1 {
-      font-family: var(--font-display);
-      font-size: var(--kd-h1-size);
-      line-height: var(--kd-h1-lh);
-      font-weight: var(--kd-h1-weight);
-      letter-spacing: var(--kd-h1-tracking);
-    }
-
-    .kd-h2 {
-      font-family: var(--font-display);
-      font-size: var(--kd-h2-size);
-      line-height: var(--kd-h2-lh);
-      font-weight: var(--kd-h2-weight);
-      letter-spacing: var(--kd-h2-tracking);
-    }
-
-    .kd-h3 {
-      font-family: var(--font-display);
-      font-size: var(--kd-h3-size);
-      line-height: var(--kd-h3-lh);
-      font-weight: var(--kd-h3-weight);
-      letter-spacing: var(--kd-h3-tracking);
-    }
-
-    .kd-h4 {
-      font-family: var(--font-display);
-      font-size: var(--kd-h4-size);
-      line-height: var(--kd-h4-lh);
-      font-weight: var(--kd-h4-weight);
-      letter-spacing: var(--kd-h4-tracking);
-    }
-
-    .kd-h5 {
-      font-family: var(--font-display);
-      font-size: var(--kd-h5-size);
-      line-height: var(--kd-h5-lh);
-      font-weight: var(--kd-h5-weight);
-      letter-spacing: var(--kd-h5-tracking);
-    }
-
-    .kd-body-large {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-large-size);
-      line-height: var(--kd-body-large-lh);
-      font-weight: var(--kd-body-large-weight);
-    }
-
-    .kd-body-small {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-small-size);
-      line-height: var(--kd-body-small-lh);
-      font-weight: var(--kd-body-small-weight);
-    }
-
-    .kd-caption {
-      font-family: var(--font-body);
-      font-size: var(--kd-caption-size);
-      line-height: var(--kd-caption-lh);
-      font-weight: var(--kd-caption-weight);
-      letter-spacing: var(--kd-caption-tracking);
-    }
-
-    .kd-overline {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      line-height: var(--kd-overline-lh);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-    }
-
-    .kd-mono {
-      font-family: var(--font-mono);
-      font-size: var(--kd-mono-size);
-      line-height: var(--kd-mono-lh);
-      font-weight: var(--kd-mono-weight);
-    }
-
-    .kd-wordmark {
-      font-family: var(--font-display);
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: var(--kd-wordmark-tracking);
-    }
-
-    .kd-measure {
-      max-width: 65ch;
-    }
-
-    .kd-text-balance {
-      text-wrap: balance;
-    }
-
-    /* ============================================================
-       LAYOUT
-       ============================================================ */
-
-    .site {
-      position: relative;
-      width: 100%;
-    }
-
-    .section {
-      position: relative;
-      z-index: 2;
-      padding: 120px 40px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 64px;
-    }
-
-    @media (min-width: 768px) {
-      .section {
-        padding: 140px 80px;
-      }
-      .section-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-    }
-
-    @media (min-width: 1100px) {
-      .section {
-        padding: 160px 100px;
-      }
-      .section-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
-      }
-    }
-
-    /* ============================================================
-       BUTTONS
-       ============================================================ */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      font-family: var(--font-display);
-      font-size: var(--kd-h5-size);
-      font-weight: var(--kd-h5-weight);
-      letter-spacing: var(--kd-h5-tracking);
-      text-transform: uppercase;
-      border: 1px solid var(--ember);
-      background: transparent;
-      color: var(--ember);
-      cursor: pointer;
-      transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .btn:hover {
-      background: var(--ember);
-      color: var(--paper);
-    }
-
-    .btn:active {
-      transform: scale(0.97);
-    }
-
-    .btn-ghost {
-      border-color: var(--slate);
-      color: var(--mist);
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--ember);
-      color: var(--ember);
-    }
-
-    .btn-strong {
-      background: var(--ember);
-      color: var(--paper);
-      border-color: var(--ember);
-    }
-
-    .btn-strong:hover {
-      background: var(--ember-deep);
-      border-color: var(--ember-deep);
-    }
-
-    /* ============================================================
-       NAV
-       ============================================================ */
-
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background: rgba(11, 11, 12, 0.82);
-      backdrop-filter: blur(16px) saturate(140%);
-      -webkit-backdrop-filter: blur(16px) saturate(140%);
-      border-bottom: 1px solid var(--carbon);
-      transition: border-color 0.4s ease;
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        padding: 16px 20px;
-      }
-      .nav-links {
-        display: none;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .nav {
-        padding: 24px 60px;
-      }
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .nav-mark {
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
-    }
-
-    .nav-wordmark {
-      font-family: var(--font-display);
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.32em;
-      font-size: 13px;
-      color: var(--bone);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--font-display);
-      font-size: var(--kd-body-small-size);
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--mist);
-      transition: color 0.25s ease;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--ember);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--ember);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      margin-left: 8px;
-    }
-
-    /* ============================================================
-       HERO — 3D canvas
-       ============================================================ */
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      min-height: 600px;
-      overflow: hidden;
-      background: var(--ink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #hero-canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-      padding: 0 24px;
-      pointer-events: none;
-      width: 100%;
-      max-width: 900px;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-      color: var(--ember);
-      margin-bottom: 28px;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .hero-eyebrow.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.08;
-      font-weight: 300;
-      letter-spacing: -1.5px;
-      color: var(--bone);
-      margin-bottom: 24px;
-      text-wrap: balance;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .hero-title.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-title em {
-      font-style: normal;
-      color: var(--ember);
-    }
-
-    .hero-sub {
-      font-family: var(--font-body);
-      font-size: clamp(16px, 2vw, 20px);
-      line-height: 1.5;
-      font-weight: 400;
-      color: var(--mist);
-      max-width: 520px;
-      margin: 0 auto 40px;
-      text-wrap: balance;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
-    }
-
-    .hero-sub.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
-    }
-
-    .hero-actions.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-actions .btn {
-      pointer-events: auto;
-    }
-
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      opacity: 0;
-      animation: fadeInUp 1s ease 1.5s forwards;
-      z-index: 3;
-    }
-
-    .hero-scroll-hint .kd-overline {
-      color: var(--slate);
-    }
-
-    .hero-scroll-hint .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--ember), transparent);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateX(-50%) translateY(12px); }
-      to { opacity: 1; transform: translateX(-50%) translateY(0); }
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
-      50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-    }
-
-    /* ============================================================
-       DIVIDER
-       ============================================================ */
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--carbon);
-      border: none;
-      margin: 0;
-    }
-
-    /* ============================================================
-       ABOUT
-       ============================================================ */
-
-    .about-eyebrow {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-      color: var(--ember);
-      margin-bottom: 24px;
-    }
-
-    .about-heading {
-      font-family: var(--font-display);
-      font-size: var(--kd-h2-size);
-      line-height: var(--kd-h2-lh);
-      font-weight: var(--kd-h2-weight);
-      letter-spacing: var(--kd-h2-tracking);
-      color: var(--bone);
-      margin-bottom: 32px;
-      text-wrap: balance;
-    }
-
-    .about-lead {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-large-size);
-      line-height: var(--kd-body-large-lh);
-      font-weight: var(--kd-body-large-weight);
-      color: var(--mist);
-      margin-bottom: 20px;
-      text-wrap: balance;
-    }
-
-    .about-body {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-size);
-      line-height: var(--kd-body-lh);
-      font-weight: var(--kd-body-weight);
-      color: var(--ash);
-      max-width: 48ch;
-    }
-
-    .about-body p + p {
-      margin-top: 16px;
-    }
-
-    .about-body strong {
-      color: var(--bone);
-      font-weight: 500;
-    }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 48px;
-      padding-top: 40px;
-      border-top: 1px solid var(--carbon);
-    }
-
-    @media (min-width: 768px) {
-      .about-stats {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 32px;
-      }
-    }
-
-    .stat {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .stat-value {
-      font-family: var(--font-display);
-      font-size: var(--kd-h1-size);
-      line-height: 1;
-      font-weight: 300;
-      letter-spacing: -0.5px;
-      color: var(--ember);
-    }
-
-    .stat-label {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-small-size);
-      line-height: 1.4;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: var(--slate);
-      text-transform: uppercase;
-    }
-
-    /* ============================================================
-       WORK — project cards
-       ============================================================ */
-
-    .work-intro {
-      margin-bottom: 48px;
-    }
-
-    .work-heading {
-      font-family: var(--font-display);
-      font-size: var(--kd-h1-size);
-      line-height: var(--kd-h1-lh);
-      font-weight: var(--kd-h1-weight);
-      letter-spacing: var(--kd-h1-tracking);
-      color: var(--bone);
-      margin-bottom: 16px;
-      text-wrap: balance;
-    }
-
-    .work-sub {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-large-size);
-      line-height: var(--kd-body-large-lh);
-      font-weight: var(--kd-body-large-weight);
-      color: var(--mist);
-      max-width: 56ch;
-      text-wrap: balance;
-    }
-
-    .work-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    @media (min-width: 768px) {
-      .work-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-      }
-    }
-
-    .work-item {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding: 28px 0;
-      border-top: 1px solid var(--carbon);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .work-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .work-item-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: var(--font-mono);
-      font-size: var(--kd-caption-size);
-      color: var(--slate);
-      letter-spacing: 0.05em;
-      text-transform: lowercase;
-    }
-
-    .work-item-spacer {
-      flex: 1;
-    }
-
-    .work-item-pillar {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-      padding: 2px 0;
-    }
-
-    .work-item-title {
-      font-family: var(--font-display);
-      font-size: var(--kd-h3-size);
-      line-height: var(--kd-h3-lh);
-      font-weight: var(--kd-h3-weight);
-      letter-spacing: var(--kd-h3-tracking);
-      color: var(--bone);
-      text-wrap: balance;
-    }
-
-    .work-item-desc {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-small-size);
-      line-height: 1.6;
-      font-weight: 400;
-      color: var(--ash);
-      text-wrap: balance;
-    }
-
-    .work-item-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 4px;
-      font-family: var(--font-display);
-      font-size: var(--kd-body-small-size);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ember);
-      transition: color 0.25s ease, gap 0.25s ease;
-    }
-
-    .work-item-link:hover {
-      color: var(--ember-deep);
-      gap: 12px;
-    }
-
-    .work-item-link svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.25s ease;
-    }
-
-    .work-item-link:hover svg {
-      transform: translateX(3px);
-    }
-
-    /* ============================================================
-       CODE — repo cards
-       ============================================================ */
-
-    .code-heading {
-      font-family: var(--font-display);
-      font-size: var(--kd-h1-size);
-      line-height: var(--kd-h1-lh);
-      font-weight: var(--kd-h1-weight);
-      letter-spacing: var(--kd-h1-tracking);
-      color: var(--bone);
-      margin-bottom: 16px;
-      text-wrap: balance;
-    }
-
-    .code-sub {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-large-size);
-      line-height: var(--kd-body-large-lh);
-      font-weight: var(--kd-body-large-weight);
-      color: var(--mist);
-      max-width: 56ch;
-      text-wrap: balance;
-    }
-
-    .code-list {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    @media (min-width: 768px) {
-      .code-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-      }
-    }
-
-    .repo-card {
-      padding: 32px;
-      background: var(--carbon);
-      border: 1px solid var(--graphite);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: border-color 0.3s ease, transform 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .repo-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .repo-card:hover {
-      border-color: var(--ember-deep);
-      transform: translateY(-2px);
-    }
-
-    .repo-card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .repo-name {
-      font-family: var(--font-mono);
-      font-size: var(--kd-body-small-size);
-      color: var(--ember);
-      letter-spacing: 0.03em;
-      text-transform: lowercase;
-    }
-
-    .repo-language {
-      font-family: var(--font-mono);
-      font-size: var(--kd-caption-size);
-      color: var(--slate);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border: 1px solid var(--graphite);
-    }
-
-    .repo-title {
-      font-family: var(--font-display);
-      font-size: var(--kd-h3-size);
-      line-height: var(--kd-h3-lh);
-      font-weight: var(--kd-h3-weight);
-      letter-spacing: var(--kd-h3-tracking);
-      color: var(--bone);
-      text-wrap: balance;
-    }
-
-    .repo-desc {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-small-size);
-      line-height: 1.6;
-      color: var(--ash);
-      text-wrap: balance;
-    }
-
-    .repo-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-      font-family: var(--font-display);
-      font-size: var(--kd-body-small-size);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ember);
-      transition: color 0.25s ease, gap 0.25s ease;
-    }
-
-    .repo-link:hover {
-      color: var(--ember-deep);
-      gap: 12px;
-    }
-
-    .repo-link svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.25s ease;
-    }
-
-    .repo-link:hover svg {
-      transform: translateX(3px);
-    }
-
-    .repo-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .repo-tech-tag {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--slate);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border: 1px solid var(--graphite);
-      background: transparent;
-    }
-
-    /* ============================================================
-       CONTACT
-       ============================================================ */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-
-    @media (min-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .contact-left {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .contact-eyebrow {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-      color: var(--ember);
-    }
-
-    .contact-heading {
-      font-family: var(--font-display);
-      font-size: var(--kd-h2-size);
-      line-height: var(--kd-h2-lh);
-      font-weight: var(--kd-h2-weight);
-      letter-spacing: var(--kd-h2-tracking);
-      color: var(--bone);
-      margin-top: 8px;
-      text-wrap: balance;
-    }
-
-    .contact-body {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-large-size);
-      line-height: var(--kd-body-large-lh);
-      font-weight: var(--kd-body-large-weight);
-      color: var(--mist);
-      text-wrap: balance;
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    @media (min-width: 768px) {
-      .contact-actions {
-        flex-direction: row;
-      }
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 0;
-      border-top: 1px solid var(--carbon);
-    }
-
-    .contact-detail:first-of-type {
-      border-top: none;
-    }
-
-    .contact-detail-icon {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
-      border: 1px solid var(--graphite);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ember);
-    }
-
-    .contact-detail-label {
-      font-family: var(--font-mono);
-      font-size: var(--kd-caption-size);
-      color: var(--slate);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      min-width: 60px;
-    }
-
-    .contact-detail-value {
-      font-family: var(--font-display);
-      font-size: var(--kd-body-small-size);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: var(--bone);
-      text-transform: lowercase;
-    }
-
-    .contact-detail-value a {
-      transition: color 0.25s ease;
-    }
-
-    .contact-detail-value a:hover {
-      color: var(--ember);
-    }
-
-    .contact-right {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .schedule-box {
-      padding: 36px;
-      background: var(--carbon);
-      border: 1px solid var(--graphite);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .schedule-title {
-      font-family: var(--font-display);
-      font-size: var(--kd-h4-size);
-      line-height: var(--kd-h4-lh);
-      font-weight: var(--kd-h4-weight);
-      letter-spacing: var(--kd-h4-tracking);
-      color: var(--bone);
-      text-transform: uppercase;
-    }
-
-    .schedule-sub {
-      font-family: var(--font-body);
-      font-size: var(--kd-body-small-size);
-      line-height: 1.6;
-      color: var(--ash);
-      text-wrap: balance;
-    }
-
-    .schedule-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 8px;
-      padding: 14px 28px;
-      font-family: var(--font-display);
-      font-size: var(--kd-h5-size);
-      font-weight: var(--kd-h5-weight);
-      letter-spacing: var(--kd-h5-tracking);
-      text-transform: uppercase;
-      background: var(--ember);
-      color: var(--paper);
-      border: 1px solid var(--ember);
-      transition: background 0.25s ease, color 0.25s ease;
-      text-decoration: none;
-    }
-
-    .schedule-link:hover {
-      background: var(--ember-deep);
-      border-color: var(--ember-deep);
-    }
-
-    .social-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border: 1px solid var(--graphite);
-      transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
-      text-decoration: none;
-    }
-
-    .social-link:hover {
-      border-color: var(--ember);
-      color: var(--ember);
-      background: rgba(217, 97, 47, 0.06);
-    }
-
-    .social-link-label {
-      font-family: var(--font-display);
-      font-size: var(--kd-body-small-size);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--mist);
-      transition: color 0.25s ease;
-    }
-
-    .social-link:hover .social-link-label {
-      color: var(--ember);
-    }
-
-    .social-link svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.25s ease;
-    }
-
-    .social-link:hover svg {
-      transform: scale(1.15);
-    }
-
-    /* ============================================================
-       FOOTER
-       ============================================================ */
-
-    .footer {
-      position: relative;
-      z-index: 2;
-      padding: 40px;
-      border-top: 1px solid var(--carbon);
-      background: var(--ink);
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .footer-mark {
-      width: 28px;
-      height: 28px;
-      flex-shrink: 0;
-    }
-
-    .footer-wordmark {
-      font-family: var(--font-display);
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.32em;
-      font-size: 11px;
-      color: var(--slate);
-    }
-
-    .footer-copy {
-      font-family: var(--font-mono);
-      font-size: var(--kd-caption-size);
-      color: var(--slate);
-      letter-spacing: 0.03em;
-      text-transform: lowercase;
-    }
-
-    /* ============================================================
-       LOADING / FALLBACK
-       ============================================================ */
-
-    .loading-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-      background: var(--ink);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      transition: opacity 0.6s ease;
-    }
-
-    .loading-overlay.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .loading-mark {
-      width: 40px;
-      height: 40px;
-    }
-
-    .loading-text {
-      font-family: var(--font-display);
-      font-size: var(--kd-overline-size);
-      font-weight: var(--kd-overline-weight);
-      letter-spacing: var(--kd-overline-tracking);
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .loading-bar {
-      width: 120px;
-      height: 1px;
-      background: var(--carbon);
-      overflow: hidden;
-    }
-
-    .loading-bar-fill {
-      width: 0%;
-      height: 100%;
-      background: var(--ember);
-      animation: loadBar 1.4s ease-in-out forwards;
-    }
-
-    @keyframes loadBar {
-      0% { width: 0%; }
-      100% { width: 100%; }
-    }
-
-    /* ============================================================
-       REDUCED MOTION
-       ============================================================ */
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      html {
-        scroll-behavior: auto;
-      }
-      .loading-bar-fill {
-        animation: none;
-        width: 100%;
-      }
-      .hero-scroll-hint .scroll-line {
-        animation: none;
-        opacity: 0.5;
-      }
-    }
-  </style>
 </head>
 <body>
+  <a class="skip-link" href="#work">Skip to work</a>
 
-  <!-- Loading overlay -->
-  <div class="loading-overlay" id="loading" aria-hidden="true">
-    <svg class="loading-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="#D9612F">
-        <rect x="0.5" y="5.5" width="72" height="17"/>
-        <rect x="9.5" y="29.5" width="72" height="17"/>
-        <rect x="18.5" y="53.5" width="72" height="17"/>
-        <rect x="27.5" y="77.5" width="72" height="17"/>
-      </g>
-    </svg>
-    <div class="loading-text">Kaeduas</div>
-    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+  <!-- Grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"><span class="cursor-label">PLAY</span></div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="nav" role="navigation" aria-label="Primary">
-    <a class="nav-brand" href="#top" aria-label="Kaeduas home">
-      <svg class="nav-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="#D9612F">
-          <rect x="0.5" y="5.5" width="72" height="17"/>
-          <rect x="9.5" y="29.5" width="72" height="17"/>
-          <rect x="18.5" y="53.5" width="72" height="17"/>
-          <rect x="27.5" y="77.5" width="72" height="17"/>
-        </g>
-      </svg>
-      <span class="nav-wordmark">Kaeduas</span>
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <span class="loader-bar"></span>
+      <span class="loader-bar"></span>
+      <span class="loader-bar"></span>
+      <span class="loader-bar"></span>
+    </div>
+    <div class="loader-count mono">000</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-head">
+    <a class="brand" href="#top" aria-label="Kaeduas — back to top">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor"><rect x="0.5" y="5.5" width="72" height="17"/><rect x="9.5" y="29.5" width="72" height="17"/><rect x="18.5" y="53.5" width="72" height="17"/><rect x="27.5" y="77.5" width="72" height="17"/></g></svg>
+      <span class="brand-word">KAEDUAS</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#code">Code</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="btn btn-ghost nav-cta" href="mailto:motsamai.main@gmail.com?subject=Kaeduas%20—%20Book%20a%20call">Book a call</a></li>
-    </ul>
-  </nav>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#systems">Systems</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="nav-cta">Book a project</a>
+    </nav>
+    <button class="menu-btn mono" aria-expanded="false" aria-controls="overlay-menu">MENU</button>
+  </header>
 
-  <!-- Site -->
-  <div class="site" id="top">
-
-    <!-- HERO -->
-    <section class="hero" id="hero" aria-label="Hero">
-      <canvas id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero-content">
-        <div class="hero-eyebrow" data-reveal>Build · Create · Entertain · Inform · Scale</div>
-        <h1 class="hero-title" data-reveal>
-          A creative house<br>that <em>moves.</em>
-        </h1>
-        <p class="hero-sub" data-reveal>
-          Generative video, design, and development under one roof. Johannesburg.
-        </p>
-          <div class="hero-actions" data-reveal>
-            <a class="btn btn-strong" href="#work">See the work</a>
-            <a class="btn" href="mailto:motsamai.main@gmail.com?subject=Kaeduas%20—%20Book%20a%20call">Book a call</a>
-          </div>
-      </div>
-      <div class="hero-scroll-hint" aria-hidden="true">
-        <span class="kd-overline">Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- ABOUT -->
-    <section class="section" id="about" aria-label="About">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div class="about-eyebrow">The founder</div>
-          <div class="about-heading">Qophe Junior<br>Motsamai.</div>
-          <div class="about-lead">
-            Born Bloemfontein. Based Johannesburg. Building Kaeduas as a creative house — one person, four pillars, one brand.
-          </div>
-          <div class="about-body">
-            <p><strong>Kaeduas</strong> is a sole proprietorship trading as a creative house, not an agency — the word is too small and too rented-out.</p>
-            <p>The work spans four things: <strong>Build</strong> (brands, systems, platforms, products), <strong>Create</strong> (design, film, sound, writing, art direction), <strong>Entertain</strong> (content, shows, formats, culture), and <strong>Inform</strong> (teaching, documenting, demystifying). Scale runs underneath all four as the operating engine.</p>
-            <p>Everything here is public by default. The process is the product.</p>
-          </div>
-          <div class="about-stats">
-            <div class="stat">
-              <div class="stat-value">2005</div>
-              <div class="stat-label">Born · Bloemfontein</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">4</div>
-              <div class="stat-label">Pillars, one brand</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">+27</div>
-              <div class="stat-label">Johannesburg</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">1</div>
-              <div class="stat-label">Roof, many disciplines</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- WORK -->
-    <section class="section" id="work" aria-label="Work">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div>
-            <div class="work-intro">
-              <div class="about-eyebrow">Selected work</div>
-              <h2 class="work-heading">Four things<br>worth watching.</h2>
-              <p class="work-sub">Generative video, design, and advertising work. Each one is public, each one ships.</p>
-            </div>
-          </div>
-          <div class="work-list">
-
-            <article class="work-item" data-reveal>
-              <div class="work-item-meta">
-                <span class="work-item-spacer"></span>
-                <span class="work-item-pillar" style="color: var(--pillar-create)">Create</span>
-              </div>
-              <h3 class="work-item-title">Sunscreen · cinematic ad</h3>
-              <p class="work-item-desc">A cinematic spot for a sunscreen brand. Shows how the formula blocks heat from reaching sensitive skin — clean product filmmaking, no filler.</p>
-              <a class="work-item-link" href="https://youtu.be/cm3sIa6nXIA" target="_blank" rel="noopener">
-                Watch
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </article>
-
-            <article class="work-item" data-reveal>
-              <div class="work-item-meta">
-                <span class="work-item-spacer"></span>
-                <span class="work-item-pillar" style="color: var(--pillar-create)">Create</span>
-              </div>
-              <h3 class="work-item-title">Chicken Licken · meta ad</h3>
-              <p class="work-item-desc">A meta ad for Chicken Licken. Pushes the brand's tone into unfamiliar territory without losing the joke.</p>
-              <a class="work-item-link" href="https://youtu.be/BEslIFlN4oI" target="_blank" rel="noopener">
-                Watch
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </article>
-
-            <article class="work-item" data-reveal>
-              <div class="work-item-meta">
-                <span class="work-item-spacer"></span>
-                <span class="work-item-pillar" style="color: var(--pillar-entertain)">Entertain</span>
-              </div>
-              <h3 class="work-item-title">Luxe Homme × Kabza De Small · duffel bag</h3>
-              <p class="work-item-desc">A concept duffel bag collaboration between Luxe Homme and Kabza De Small. Product visualisation for a lifestyle collab.</p>
-              <a class="work-item-link" href="https://youtu.be/LsKKfPNiQd8" target="_blank" rel="noopener">
-                Watch
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </article>
-
-            <article class="work-item" data-reveal style="grid-column: 1 / -1;">
-              <div class="work-item-meta">
-                <span class="work-item-pillar" style="color: var(--pillar-create)">Create</span>
-                <span class="work-item-spacer"></span>
-                <span style="color: var(--ember)">Generative · AI</span>
-              </div>
-              <h3 class="work-item-title">Galaxy Boy · generative AI YouTube ad campaign</h3>
-              <p class="work-item-desc">A generative AI ad campaign for Galaxy Boy on YouTube. AI-assisted production used as a tool, not a shortcut — each frame earned. Two cuts: the all-black meta cut and the pink-slides campaign cut.</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
-                <a class="work-item-link" href="https://youtu.be/4y6gyhUDiE0" target="_blank" rel="noopener" style="flex: 1; min-width: 180px;">
-                  All-black meta cut
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a class="work-item-link" href="https://youtu.be/h4Yn4rLQtwg" target="_blank" rel="noopener" style="flex: 1; min-width: 180px;">
-                  Pink slides cut
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- CODE -->
-    <section class="section" id="code" aria-label="Code">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div>
-            <div class="about-eyebrow">Open source</div>
-            <h2 class="code-heading">Two repos.<br>Both public.</h2>
-            <p class="code-sub">Shipping code is part of the brand. Both projects are live, both are on GitHub under QJMotsamai.</p>
-          </div>
-          <div class="code-list">
-
-            <article class="repo-card" data-reveal>
-              <div class="repo-card-header">
-                <span class="repo-name">QJMotsamai / qj-research-agent</span>
-                <span class="repo-language">JavaScript</span>
-              </div>
-              <h3 class="repo-title">AI-powered research agent</h3>
-              <p class="repo-desc">An AI research and intelligence agent built with Gemini. Structured queries, report generation, and a 3D glass UI. Redesigned with animated 3D logo, glass cards, and neural mesh background.</p>
-              <a class="repo-link" href="https://github.com/QJMotsamai/qj-research-agent" target="_blank" rel="noopener">
-                View on GitHub
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.54-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99 1.05-.915 2.325-1.305 3.495-.99 1.26.315 1.98.87 1.845 1.23.945.015 1.62-.765.015-.795-.705-.12-1.32-.6-1.32-1.695 0-.285.225-.6.6-.825.375-.225.825-.24 1.23-.255C20.57 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <div class="repo-tech">
-                <span class="repo-tech-tag">React</span>
-                <span class="repo-tech-tag">Vite</span>
-                <span class="repo-tech-tag">Gemini</span>
-                <span class="repo-tech-tag">3D UI</span>
-                <span class="repo-tech-tag">Glassmorphism</span>
-              </div>
-            </article>
-
-            <article class="repo-card" data-reveal>
-              <div class="repo-card-header">
-                <span class="repo-name">QJMotsamai / mr-rage-bait</span>
-                <span class="repo-language">Node.js</span>
-              </div>
-              <h3 class="repo-title">Deadpan Gemini chatbot</h3>
-              <p class="repo-desc">A character-led chatbot built to be mildly infuriating on purpose. Answers the actual question first, then adds dry commentary. Never cruel, never punching down. Free tier plus a R35 30-day pass.</p>
-              <a class="repo-link" href="https://github.com/QJMotsamai/mr-rage-bait" target="_blank" rel="noopener">
-                View on GitHub
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.54-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99 1.05-.915 2.325-1.305 3.495-.99 1.26.315 1.98.87 1.845 1.23.945.015 1.62-.765.015-.795-.705-.12-1.32-.6-1.32-1.695 0-.285.225-.6.6-.825.375-.225.825-.24 1.23-.255C20.57 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <div class="repo-tech">
-                <span class="repo-tech-tag">Node.js</span>
-                <span class="repo-tech-tag">Gemini</span>
-                <span class="repo-tech-tag">Groq</span>
-                <span class="repo-tech-tag">Postgres</span>
-                <span class="repo-tech-tag">Yoco</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- CONTACT -->
-    <section class="section" id="contact" aria-label="Contact">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div class="contact-left">
-            <div class="about-eyebrow">Work with us</div>
-            <h2 class="contact-heading">Three ways<br>to reach QJ.</h2>
-            <p class="contact-body">Email for briefs and proposals. WhatsApp or call for anything that needs a faster line. Pick the one that matches the urgency.</p>
-            <div class="contact-actions">
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </div>
-                <span class="contact-detail-label">Email</span>
-                <span class="contact-detail-value">
-                  <a href="mailto:motsamai.main@gmail.com">motsamai.main@gmail.com</a>
-                </span>
-              </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <span class="contact-detail-label">WhatsApp</span>
-                <span class="contact-detail-value">
-                  <a href="https://wa.me/27672363235" target="_blank" rel="noopener">+27 67 236 3235</a>
-                </span>
-              </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <span class="contact-detail-label">Call</span>
-                <span class="contact-detail-value">
-                  <a href="tel:+27672363235">+27 67 236 3235</a>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-right">
-            <div class="schedule-box">
-              <div class="schedule-title">Book a call</div>
-              <p class="schedule-sub">30 minutes. Screen share welcome. Bring the brief, bring the question, bring nothing — the call works either way.</p>
-              <a class="schedule-link" href="mailto:motsamai.main@gmail.com?subject=Kaeduas%20—%20Book%20a%20call">
-                Email to book
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-              <p class="schedule-sub" style="margin-top: 8px; font-size: 12px; color: var(--slate);">Or WhatsApp +27 67 236 3235 — same team, faster line.</p>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-              <span class="kd-overline" style="color: var(--ember);">Follow</span>
-              <div class="social-list">
-                <a class="social-link" href="https://github.com/QJMotsamai" target="_blank" rel="noopener" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.54-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99 1.05-.915 2.325-1.305 3.495-.99 1.26.315 1.98.87 1.845 1.23.945.015 1.62-.765.015-.795-.705-.12-1.32-.6-1.32-1.695 0-.285.225-.6.6-.825.375-.225.825-.24 1.23-.255C20.57 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span class="social-link-label">GitHub</span>
-                </a>
-                <a class="social-link" href="https://www.linkedin.com/in/qj-motsamai-955596421" target="_blank" rel="noopener" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h3.414c1.328 0 2.262.003 2.939.235.04.042.082.12.082.271v1.284h-1.696c-1.131 0-1.328.269-1.328.52 0 .269.198.482.52.482h1.452v5.568H20.89zM5.3 10.065a6.561 6.561 0 0 1-1.926.3A6.561 6.561 0 0 1 3.374 10c0-3.668 2.964-6.632 6.561-6.632a6.561 6.561 0 0 1 4.637 1.784A6.553 6.553 0 0 1 12 1.5c2.127 0 4.113 1.004 5.513 2.488a6.56 6.56 0 0 1 1.926.316v3.468z"/></svg>
-                  <span class="social-link-label">LinkedIn</span>
-                </a>
-                <a class="social-link" href="https://www.instagram.com/qophe_junior_motsamai" target="_blank" rel="noopener" aria-label="Instagram — Qophe Junior Motsamai">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272-.271 2.696-.271 7.207c0 4.502.36 8.461 3.287 9.756.465.227.89.121 1.212-.246.322-.367.628-.577.936-.808.982-.716 2.633-1.255 3.822-2.181.33-.268.7-.412 1.102-.412h.037c.402 0 .768.144 1.1.412 1.189.926 2.84 1.465 4.028 2.181.308.23.714.024.936.808.322.367.746.472 1.212.246C15.64.53 15.998.42 16.462.204c2.927-.59 6.088-.59 8.99 0 .464.216.82.322 1.212.246 2.947-1.305 3.307-5.264 3.287-9.76 0-4.502-.64-8.117-2.417-9.96C20.032.014 19.624 0 16.365 0H12z"/></svg>
-                  <span class="social-link-label">Instagram</span>
-                </a>
-                <a class="social-link" href="https://youtube.com/@kaeduas" target="_blank" rel="noopener" aria-label="YouTube — Kaeduas">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 11.54 0 16.371a3.016 3.016 0 0 0 .505 1.818A3.017 3.017 0 0 0 3.602 21c1.886 0 4.228-.568 5.622-1.487a3.016 3.016 0 0 0 1.818.505 3.017 3.017 0 0 0 2.459-1.036c.665-.972 1.002-2.343.995-4.312a3.017 3.017 0 0 0-.505-1.818C9.495 16.465 12 16.465 12 16.465s2.505 0 3.462-.574a3.017 3.017 0 0 0 1.048-2.118 3.016 3.016 0 0 0-1.048-2.136 3.017 3.017 0 0 0-1.818-.505c-.228-.028-.45-.053-.669-.074a3.016 3.016 0 0 1-.505-1.818C14.495 4.055 12 4.055 12 4.055s-2.505 0-3.462.574a3.017 3.017 0 0 0-1.048 2.118 3.016 3.016 0 0 0 1.818.505c.24.02.475.048.707.082a3.016 3.016 0 0 1 1.818.505A3.017 3.017 0 0 0 21 8.07C21 5.15 21 3.02 21 0a3.017 3.017 0 0 0-2.136 2.136 3.016 3.016 0 0 0 4.411 4.41c.025.028.05.055.074.086a3.016 3.016 0 0 0 2.136 2.136 3.017 3.017 0 0 0 1.818-.505 3.016 3.016 0 0 0 .505-1.818 3.017 3.017 0 0 0-1.048-2.118c-.957-.518-2.3-.826-3.462-.826s-2.505.308-3.462.826a3.017 3.017 0 0 0-1.048 2.118 3.016 3.016 0 0 0 2.459 1.036zM9.5 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
-                  <span class="social-link-label">YouTube</span>
-                </a>
-                <a class="social-link" href="https://x.com/Kaeduas" target="_blank" rel="noopener" aria-label="X / Twitter — Kaeduas">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                  <span class="social-link-label">X</span>
-                </a>
-                <a class="social-link" href="https://www.instagram.com/kaeduas" target="_blank" rel="noopener" aria-label="Instagram — Kaeduas">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272-.271 2.696-.271 7.207c0 4.502.36 8.461 3.287 9.756.465.227.89.121 1.212-.246.322-.367.628-.577.936-.808.982-.716 2.633-1.255 3.822-2.181.33-.268.7-.412 1.102-.412h.037c.402 0 .768.144 1.1.412 1.189.926 2.84 1.465 4.028 2.181.308.23.714.024.936.808.322.367.746.472 1.212.246C15.64.53 15.998.42 16.462.204c2.927-.59 6.088-.59 8.99 0 .464.216.82.322 1.212.246 2.947-1.305 3.307-5.264 3.287-9.76 0-4.502-.64-8.117-2.417-9.96C20.032.014 19.624 0 16.365 0H12z"/></svg>
-                  <span class="social-link-label">Kaeduas</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+  <!-- Mobile overlay menu -->
+  <div class="menu-overlay" id="overlay-menu" aria-hidden="true">
+    <nav class="menu-overlay-nav" aria-label="Mobile">
+      <a href="#work"><span class="mono">01</span>Work</a>
+      <a href="#systems"><span class="mono">02</span>Systems</a>
+      <a href="#services"><span class="mono">03</span>Services</a>
+      <a href="#contact"><span class="mono">04</span>Contact</a>
+    </nav>
+    <div class="menu-overlay-foot">
+      <a href="https://wa.me/27672363235" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:motsamai.main@gmail.com">Email</a>
+      <a href="https://youtube.com/@kaeduas" target="_blank" rel="noopener">YouTube</a>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-inner">
-      <a class="footer-brand" href="#top" aria-label="Kaeduas home">
-        <svg class="footer-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g fill="#D9612F">
-            <rect x="0.5" y="5.5" width="72" height="17"/>
-            <rect x="9.5" y="29.5" width="72" height="17"/>
-            <rect x="18.5" y="53.5" width="72" height="17"/>
-            <rect x="27.5" y="77.5" width="72" height="17"/>
-          </g>
-        </svg>
-        <span class="footer-wordmark">Kaeduas</span>
-      </a>
-      <div class="footer-copy">
-        &copy; 2026 Kaeduas — Qophe Junior Motsamai · Johannesburg · Built, created, entertained, informed, scaled.
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Kaeduas — creative AI studio">
+      <canvas id="webgl" aria-hidden="true"></canvas>
+      <div class="hero-frame">
+        <p class="hero-overline mono"><span class="ember-dot" aria-hidden="true"></span>KAEDUAS — CREATIVE AI STUDIO</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="line-inner">Build. Create.</span></span>
+          <span class="line"><span class="line-inner">Entertain. <em>Inform.</em></span></span>
+          <span class="line"><span class="line-inner"><em class="scale-word">Scale.</em></span></span>
+        </h1>
+        <div class="hero-side">
+          <p class="hero-sub">The studio of <strong>Qophe Junior Motsamai</strong> — generative video, advertising creative and web&nbsp;systems. Born in Bloemfontein. Booked worldwide.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-ember magnetic" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20have%20a%20project%20for%20Kaeduas." target="_blank" rel="noopener">
+              <span>Book a project</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="#work">
+              <span>Watch the work</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <p class="mono hero-foot-item"><span class="scroll-cue" aria-hidden="true"></span>SCROLL</p>
+          <p class="mono hero-foot-item">29.0852° S, 26.1596° E — WORKING WORLDWIDE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-run">
+          <span>Generative video</span><i>▮</i><span>AI advertising</span><i>▮</i><span>Brand design</span><i>▮</i><span>Web systems</span><i>▮</i><span>AI agents</span><i>▮</i>
+        </span>
+        <span class="marquee-run">
+          <span>Generative video</span><i>▮</i><span>AI advertising</span><i>▮</i><span>Brand design</span><i>▮</i><span>Web systems</span><i>▮</i><span>AI agents</span><i>▮</i>
+        </span>
       </div>
     </div>
-  </footer>
 
-  <!-- Preconnect + fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Inter:wght@100..900&family=Instrument+Serif&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <!-- ============ STUDIO ============ -->
+    <section class="section studio" id="studio" aria-label="The studio">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">01</span>The studio</p>
+        <hr class="head-rule" />
+      </div>
+      <p class="statement">
+        I make people <em>stop scrolling.</em> Five seconds of a Chicken&nbsp;Licken cut or a Galxboy drop does more selling than a page of copy — so that's the standard every Kaeduas frame is held to.
+      </p>
+      <div class="studio-grid">
+        <div class="studio-copy reveal-fade">
+          <p>Kaeduas runs on one person and a full stack of machines. Qophe "QJ" Motsamai — born in Bloemfontein, Free State on 4&nbsp;June 2005 — directs, generates, edits, designs and codes the work himself. No account managers, no hand-offs, no telephone game between a brief and the finished thing.</p>
+          <p>Advertising is the proving ground: meta ads for streetwear and food, a cinematic sunscreen spot, a collab film for Luxe&nbsp;Homme × Kabza&nbsp;De&nbsp;Small. When the cameras are off, QJ builds software — research agents, chatbots, sites like this one.</p>
+        </div>
+        <ul class="facts" role="list">
+          <li class="reveal-fade"><span class="mono fact-key">Born</span><span class="fact-val">04.06.2005 — Bloemfontein, ZA</span></li>
+          <li class="reveal-fade"><span class="mono fact-key">Base</span><span class="fact-val">Remote — working worldwide</span></li>
+          <li class="reveal-fade"><span class="mono fact-key">Output</span><span class="fact-val">Video · Ads · Design · Systems</span></li>
+          <li class="reveal-fade"><span class="mono fact-key">Status</span><span class="fact-val fact-open"><span class="ember-dot" aria-hidden="true"></span>Booking now</span></li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- Libraries -->
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
-    }
-  }
-  </script>
+    <!-- ============ WORK ============ -->
+    <section class="section work" id="work" aria-label="Selected work">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">02</span>Selected work</p>
+        <hr class="head-rule" />
+      </div>
+      <h2 class="section-title split-title">Ads built to stop the scroll.</h2>
 
-  <script type="module">
-    // ============================================================
-    // KAEDUAS — Three.js hero scene
-    // Premium 3D hero: Strata mark floating in Ember-lit space,
-    // mouse-reactive parallax, gentle drift, ground plane glow.
-    // The mark stays FLAT — no 3D on the logo itself (brand rule).
-    // ============================================================
+      <div class="work-list">
 
-    import * as THREE from 'three';
-    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        <article class="work-card" data-video="BEslIFlN4oI">
+          <div class="work-meta reveal-fade">
+            <span class="mono work-index">01</span>
+            <h3 class="work-title">Chicken Licken</h3>
+            <p class="work-type mono">Meta ad — fast food</p>
+          </div>
+          <div class="work-media parallax-media">
+            <button class="facade" type="button" data-video="BEslIFlN4oI" aria-label="Play: Chicken Licken meta ad">
+              <img src="https://i.ytimg.com/vi/BEslIFlN4oI/maxresdefault.jpg" alt="Frame from the Chicken Licken meta ad" loading="lazy" />
+              <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            </button>
+          </div>
+          <a class="work-watch mono reveal-fade" href="https://youtu.be/BEslIFlN4oI" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </article>
 
-    (function () {
-      const canvas = document.getElementById('hero-canvas');
-      if (!canvas) return;
+        <article class="work-card" data-video="4y6gyhUDiE0">
+          <div class="work-meta reveal-fade">
+            <span class="mono work-index">02</span>
+            <h3 class="work-title">Galxboy — All Black</h3>
+            <p class="work-type mono">Meta ad — streetwear</p>
+          </div>
+          <div class="work-media parallax-media">
+            <button class="facade" type="button" data-video="4y6gyhUDiE0" aria-label="Play: Galxboy All Black meta ad">
+              <img src="https://i.ytimg.com/vi/4y6gyhUDiE0/maxresdefault.jpg" alt="Frame from the Galxboy All Black meta ad" loading="lazy" />
+              <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            </button>
+          </div>
+          <a class="work-watch mono reveal-fade" href="https://youtu.be/4y6gyhUDiE0" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </article>
 
-      const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x0B0B0C);
+        <article class="work-card" data-video="h4Yn4rLQtwg">
+          <div class="work-meta reveal-fade">
+            <span class="mono work-index">03</span>
+            <h3 class="work-title">Galxboy — Pink Slides</h3>
+            <p class="work-type mono">Meta ad — product</p>
+          </div>
+          <div class="work-media parallax-media">
+            <button class="facade" type="button" data-video="h4Yn4rLQtwg" aria-label="Play: Galxboy pink slides meta ad">
+              <img src="https://i.ytimg.com/vi/h4Yn4rLQtwg/maxresdefault.jpg" alt="Frame from the Galxboy pink slides meta ad" loading="lazy" />
+              <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            </button>
+          </div>
+          <a class="work-watch mono reveal-fade" href="https://youtu.be/h4Yn4rLQtwg" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </article>
 
-      const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
-      camera.position.set(0, 2, 12);
-      camera.lookAt(0, 0, 0);
+        <article class="work-card" data-video="cm3sIa6nXIA">
+          <div class="work-meta reveal-fade">
+            <span class="mono work-index">04</span>
+            <h3 class="work-title">Sunscreen</h3>
+            <p class="work-type mono">Cinematic ad</p>
+          </div>
+          <div class="work-media parallax-media">
+            <button class="facade" type="button" data-video="cm3sIa6nXIA" aria-label="Play: sunscreen cinematic ad">
+              <img src="https://i.ytimg.com/vi/cm3sIa6nXIA/maxresdefault.jpg" alt="Frame from the sunscreen cinematic ad" loading="lazy" />
+              <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            </button>
+          </div>
+          <a class="work-watch mono reveal-fade" href="https://youtu.be/cm3sIa6nXIA" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </article>
 
-      const renderer = new THREE.WebGLRenderer({
-        canvas,
-        antialias: true,
-        alpha: false,
-      });
-      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.1;
-      renderer.outputColorSpace = THREE.SRGBColorSpace;
+        <article class="work-card" data-video="LsKKfPNiQd8">
+          <div class="work-meta reveal-fade">
+            <span class="mono work-index">05</span>
+            <h3 class="work-title">Luxe Homme × Kabza De Small</h3>
+            <p class="work-type mono">Collab film — duffel bag</p>
+          </div>
+          <div class="work-media parallax-media">
+            <button class="facade" type="button" data-video="LsKKfPNiQd8" aria-label="Play: Luxe Homme and Kabza De Small duffel bag collab ad">
+              <img src="https://i.ytimg.com/vi/LsKKfPNiQd8/maxresdefault.jpg" alt="Frame from the Luxe Homme and Kabza De Small duffel bag collab film" loading="lazy" />
+              <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            </button>
+          </div>
+          <a class="work-watch mono reveal-fade" href="https://youtu.be/LsKKfPNiQd8" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </article>
 
-      // ---- Lights ----
-      const ambient = new THREE.AmbientLight(0x2a1a10, 0.4);
-      scene.add(ambient);
+      </div>
+    </section>
 
-      const keyLight = new THREE.DirectionalLight(0xd9612F, 2.2);
-      keyLight.position.set(-4, 6, 6);
-      scene.add(keyLight);
+    <!-- ============ SYSTEMS ============ -->
+    <section class="section systems" id="systems" aria-label="Software systems">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">03</span>Systems</p>
+        <hr class="head-rule" />
+      </div>
+      <h2 class="section-title split-title">Software I build when the cameras are off.</h2>
+      <div class="repo-list">
+        <a class="repo-card reveal-fade magnetic-soft" href="https://github.com/QJMotsamai/qj-research-agent" target="_blank" rel="noopener">
+          <div class="repo-top">
+            <span class="mono repo-tag">QJ-RESEARCH-AGENT</span>
+            <span class="mono repo-lang">TypeScript</span>
+          </div>
+          <p class="repo-desc">An AI research and intelligence agent built on Gemini. Point it at a question, it goes away, digs, and comes back with the answer structured — the kind of grunt work a whole desk used to do.</p>
+          <span class="repo-link mono">OPEN ON GITHUB <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="repo-card reveal-fade magnetic-soft" href="https://github.com/QJMotsamai/mr-rage-bait" target="_blank" rel="noopener">
+          <div class="repo-top">
+            <span class="mono repo-tag">MR-RAGE-BAIT</span>
+            <span class="mono repo-lang">JavaScript · Three.js</span>
+          </div>
+          <p class="repo-desc">A 3D deadpan Gemini chatbot built for one purpose: rage-baiting its users. Proof that personality is a feature — a character with a face, an attitude, and an API key.</p>
+          <span class="repo-link mono">OPEN ON GITHUB <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+      <a class="gh-all mono reveal-fade" href="https://github.com/QJMotsamai" target="_blank" rel="noopener">EVERYTHING ELSE LIVES ON GITHUB ↗</a>
+    </section>
 
-      const fillLight = new THREE.DirectionalLight(0x0B0B0C, 0.5);
-      fillLight.position.set(5, 2, -4);
-      scene.add(fillLight);
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-label="Services">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">04</span>Services</p>
+        <hr class="head-rule" />
+      </div>
+      <h2 class="section-title split-title">Four ways to hire the studio.</h2>
+      <div class="service-list">
+        <a class="service-row" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20need%20a%20generative%20video." target="_blank" rel="noopener">
+          <span class="mono service-index">01</span>
+          <div class="service-body">
+            <h3>Generative video</h3>
+            <p>Scroll-stopping AI video for Meta, YouTube and TikTok. Concept to final cut in days — hooks, cuts and colour graded like it cost ten times more.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="service-row" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20need%20campaign%20ads%20for%20my%20brand." target="_blank" rel="noopener">
+          <span class="mono service-index">02</span>
+          <div class="service-body">
+            <h3>AI advertising</h3>
+            <p>Campaign creative built for performance: hooks, edits and test variants designed to survive the feed and earn the click. Judged by the numbers, not by taste alone.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="service-row" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20need%20brand%20and%20design%20work." target="_blank" rel="noopener">
+          <span class="mono service-index">03</span>
+          <div class="service-body">
+            <h3>Brand &amp; design</h3>
+            <p>Identity, art direction and campaign visuals with a point of view. If your brand can't be picked out of a lineup, it isn't finished.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="service-row" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20need%20a%20website%20or%20an%20AI%20system." target="_blank" rel="noopener">
+          <span class="mono service-index">04</span>
+          <div class="service-body">
+            <h3>Web &amp; AI systems</h3>
+            <p>Sites like this one. Agents, chatbots and tools wired into your workflow to do real work — not demos that die in a tab.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </section>
 
-      const rimLight = new THREE.PointLight(0xd9612F, 1.5, 20);
-      rimLight.position.set(0, -1, -6);
-      scene.add(rimLight);
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq" aria-label="Frequently asked questions">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">05</span>Brief me</p>
+        <hr class="head-rule" />
+      </div>
+      <h2 class="section-title split-title">Answers, before you even ask.</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Who is Qophe Junior Motsamai?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>QJ — born in Bloemfontein on 4&nbsp;June 2005 — is a creative AI architect and the founder of Kaeduas. He directs every piece of work the studio ships, from the first frame to the final commit.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What does Kaeduas actually do?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Generative video and AI advertising for Meta, YouTube and TikTok. Brand and campaign design. And the software side: portfolio sites, research agents and chatbots — the Systems section above is all real, public code.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I book the studio?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>WhatsApp is fastest: +27&nbsp;67&nbsp;236&nbsp;3235. For detailed briefs and files, email <a href="mailto:motsamai.main@gmail.com">motsamai.main@gmail.com</a>. Prefer a call? The same number rings his phone.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where are you based — and do you work with international clients?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Born and raised in Bloemfontein, South Africa — working worldwide. The studio runs remote-first, which means your timezone is a detail, not a dealbreaker.</p>
+        </details>
+      </div>
+    </section>
 
-      const topLight = new THREE.DirectionalLight(0x8A8A92, 0.3);
-      topLight.position.set(0, 8, 2);
-      scene.add(topLight);
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-label="Contact and booking">
+      <div class="section-head reveal-line">
+        <p class="mono section-label"><span class="label-index">06</span>Contact</p>
+        <hr class="head-rule" />
+      </div>
+      <h2 class="contact-title split-title">Got a project? <em>Let's make it unmissable.</em></h2>
+      <div class="action-grid">
+        <a class="action-tile action-primary magnetic-soft reveal-fade" href="https://wa.me/27672363235?text=Hi%20QJ%20—%20I%20have%20a%20project%20for%20Kaeduas." target="_blank" rel="noopener">
+          <span class="mono action-key">WHATSAPP</span>
+          <span class="action-val">+27 67 236 3235</span>
+          <span class="mono action-note">Fastest response</span>
+        </a>
+        <a class="action-tile magnetic-soft reveal-fade" href="mailto:motsamai.main@gmail.com?subject=Project%20brief%20—%20Kaeduas">
+          <span class="mono action-key">EMAIL</span>
+          <span class="action-val action-val-sm">motsamai.main@gmail.com</span>
+          <span class="mono action-note">Best for briefs &amp; files</span>
+        </a>
+        <a class="action-tile magnetic-soft reveal-fade" href="tel:+27672363235">
+          <span class="mono action-key">CALL</span>
+          <span class="action-val">+27 67 236 3235</span>
+          <span class="mono action-note">Straight to the phone</span>
+        </a>
+      </div>
+      <div class="social-row reveal-fade">
+        <a href="https://www.linkedin.com/in/qj-motsamai-955596421" target="_blank" rel="noopener">LinkedIn<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.instagram.com/qophe_junior_motsamai" target="_blank" rel="noopener">Instagram — personal<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.instagram.com/kaeduas" target="_blank" rel="noopener">Instagram — studio<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://youtube.com/@kaeduas" target="_blank" rel="noopener">YouTube<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://x.com/Kaeduas" target="_blank" rel="noopener">X / Twitter<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://github.com/QJMotsamai" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
 
-      // ---- Ground plane (glow disc) ----
-      const groundGeo = new THREE.CircleGeometry(5, 64);
-      const groundMat = new THREE.MeshStandardMaterial({
-        color: 0x9E3F1E,
-        transparent: true,
-        opacity: 0.22,
-        roughness: 0.4,
-        metalness: 0.1,
-        side: THREE.DoubleSide,
-      });
-      const ground = new THREE.Mesh(groundGeo, groundMat);
-      ground.rotation.x = -Math.PI / 2;
-      ground.position.y = -1.8;
-      scene.add(ground);
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-foot" aria-label="Footer">
+      <p class="foot-word" aria-hidden="true">KAEDUAS</p>
+      <div class="foot-row">
+        <p class="mono">© 2026 KAEDUAS — QOPHE JUNIOR MOTSAMAI</p>
+        <p class="mono">BLOEMFONTEIN, ZA <span class="foot-time" id="sast-clock">--:--</span> SAST</p>
+        <button class="mono to-top" id="to-top" type="button">BACK TO TOP ↑</button>
+      </div>
+    </footer>
 
-      // Glow ring
-      const ringGeo = new THREE.RingGeometry(2.4, 2.8, 64);
-      const ringMat = new THREE.MeshBasicMaterial({
-        color: 0xD9612F,
-        transparent: true,
-        opacity: 0.15,
-        side: THREE.DoubleSide,
-      });
-      const ring = new THREE.Mesh(ringGeo, ringMat);
-      ring.rotation.x = -Math.PI / 2;
-      ring.position.y = -1.78;
-      scene.add(ring);
+  </main>
 
-      // ---- Strata mark as a 2D plane in 3D space ----
-      // Build the mark from brand spec: 4 bars 72x17, gap 7, step 9
-      // Scale factor: 1 unit in brand grid = 0.04 world units
-      const s = 0.04;
-      const barW = 72 * s;
-      const barH = 17 * s;
-      const gap = 7 * s;
-      const step = 9 * s;
-
-      const markGroup = new THREE.Group();
-      const barMat = new THREE.MeshStandardMaterial({
-        color: 0xD9612F,
-        roughness: 0.25,
-        metalness: 0.05,
-        emissive: 0x9E3F1E,
-        emissiveIntensity: 0.12,
-      });
-
-      const barGeo = new THREE.PlaneGeometry(barW, barH);
-
-      const positions = [
-        { x: 0, y: 0 },
-        { x: step, y: gap + barH },
-        { x: step * 2, y: gap * 2 + barH * 2 },
-        { x: step * 3, y: gap * 3 + barH * 3 },
-      ];
-
-      // Center the group so its bounding box is at origin
-      const totalW = barW + step * 3;
-      const totalH = gap * 3 + barH * 4;
-      const offsetX = totalW / 2;
-      const offsetY = totalH / 2;
-
-      positions.forEach((p, i) => {
-        const bar = new THREE.Mesh(barGeo.clone(), barMat);
-        bar.position.set(p.x - offsetX, -(p.y - offsetY), 0);
-        bar.renderOrder = 1;
-        markGroup.add(bar);
-      });
-
-      // Slight backing plate for depth
-      const backMat = new THREE.MeshStandardMaterial({
-        color: 0x141416,
-        roughness: 0.8,
-        metalness: 0.0,
-        transparent: true,
-        opacity: 0.6,
-      });
-      const backPlane = new THREE.Mesh(
-        new THREE.PlaneGeometry(totalW * 1.04, totalH * 1.04),
-        backMat
-      );
-      backPlane.position.set(0, 0, -0.05);
-      markGroup.add(backPlane);
-
-      // Subtle edge glow plane
-      const edgeMat = new THREE.MeshBasicMaterial({
-        color: 0xD9612F,
-        transparent: true,
-        opacity: 0.06,
-        side: THREE.DoubleSide,
-      });
-      const edgePlane = new THREE.Mesh(
-        new THREE.PlaneGeometry(totalW * 1.12, totalH * 1.12),
-        edgeMat
-      );
-      edgePlane.position.set(0, 0, -0.07);
-      markGroup.add(edgePlane);
-
-      markGroup.position.set(0, 0.3, 0);
-      scene.add(markGroup);
-
-      // ---- Floating particles (Ember dust) ----
-      const particleCount = 180;
-      const particleGeo = new THREE.BufferGeometry();
-      const positionsArr = new Float32Array(particleCount * 3);
-      const sizes = new Float32Array(particleCount);
-      const speeds = new Float32Array(particleCount);
-
-      for (let i = 0; i < particleCount; i++) {
-        const radius = 1.5 + Math.random() * 4.5;
-        const theta = Math.random() * Math.PI * 2;
-        const phi = Math.random() * Math.PI - Math.PI / 2;
-        positionsArr[i * 3] = Math.cos(theta) * radius * Math.cos(phi);
-        positionsArr[i * 3 + 1] = Math.sin(phi) * radius * 0.6 + 0.3;
-        positionsArr[i * 3 + 2] = Math.sin(theta) * radius * Math.cos(phi);
-        sizes[i] = 0.02 + Math.random() * 0.06;
-        speeds[i] = 0.2 + Math.random() * 0.5;
-      }
-
-      particleGeo.setAttribute('position', new THREE.BufferAttribute(positionsArr, 3));
-      particleGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-
-      const particleMat = new THREE.PointsMaterial({
-        color: 0xD9612F,
-        size: 0.04,
-        transparent: true,
-        opacity: 0.25,
-        blending: THREE.AdditiveBlending,
-        depthWrite: false,
-        sizeAttenuation: true,
-      });
-
-      const particles = new THREE.Points(particleGeo, particleMat);
-      scene.add(particles);
-
-      // Store per-particle data for animation
-      const particleData = [];
-      for (let i = 0; i < particleCount; i++) {
-        particleData.push({
-          baseY: positionsArr[i * 3 + 1],
-          speed: speeds[i],
-          phase: Math.random() * Math.PI * 2,
-        });
-      }
-
-      // ---- Mouse tracking ----
-      let mouseX = 0;
-      let mouseY = 0;
-      let targetRotX = 0;
-      let targetRotY = 0;
-
-      const windowHalfX = window.innerWidth / 2;
-      const windowHalfY = window.innerHeight / 2;
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = (e.clientX - windowHalfX) / windowHalfX;
-        mouseY = (e.clientY - windowHalfY) / windowHalfY;
-      }, { passive: true });
-
-      // Touch support
-      document.addEventListener('touchmove', (e) => {
-        if (e.touches.length > 0) {
-          const t = e.touches[0];
-          mouseX = (t.clientX - windowHalfX) / windowHalfX;
-          mouseY = (t.clientY - windowHalfY) / windowHalfY;
-        }
-      }, { passive: true });
-
-      // ---- Scroll tracking (for subtle parallax) ----
-      let scrollProgress = 0;
-
-      const scrollHandler = () => {
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollProgress = docHeight > 0 ? window.scrollY / docHeight : 0;
-      };
-      window.addEventListener('scroll', scrollHandler, { passive: true });
-      scrollHandler();
-
-      // ---- Resize ----
-      const onResize = () => {
-        const w = canvas.clientWidth;
-        const h = canvas.clientHeight;
-        if (canvas.width !== w || canvas.height !== h) {
-          renderer.setSize(w, h, false);
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
-        }
-      };
-      window.addEventListener('resize', onResize, { passive: true });
-      onResize();
-
-      // ---- Animation loop ----
-      const clock = new THREE.Clock();
-
-      function animate() {
-        requestAnimationFrame(animate);
-
-        const t = clock.getElapsedTime();
-
-        // Smooth mouse interpolation
-        targetRotX += (mouseY * 0.08 - targetRotX) * 0.06;
-        targetRotY += (mouseX * 0.15 - targetRotY) * 0.06;
-
-        // Mark: gentle drift + mouse-reactive tilt + slow float
-        markGroup.rotation.x = targetRotateX(base = 0, target = targetRotX, t) * 0.6;
-        markGroup.rotation.y = targetRotateY(base = 0, target = targetRotY, t) * 0.6;
-        markGroup.position.y = 0.3 + Math.sin(t * 0.4) * 0.04;
-
-        // Particles: drift + individual bob
-        const pos = particles.geometry.attributes.position.array;
-        for (let i = 0; i < particleCount; i++) {
-          const data = particleData[i];
-          pos[i * 3 + 1] = data.baseY + Math.sin(t * data.speed + data.phase) * 0.12;
-          // Slow orbit
-          const idx = i * 3;
-          const radius = Math.sqrt(pos[idx] * pos[idx] + pos[idx + 2] * pos[idx + 2]);
-          if (radius > 0.01) {
-            const angle = Math.atan2(pos[idx + 2], pos[idx]) + 0.0008;
-            pos[idx] = Math.cos(angle) * radius;
-            pos[idx + 2] = Math.sin(angle) * radius;
-          }
-        }
-        particles.geometry.attributes.position.needsUpdate = true;
-
-        // Ring pulse
-        ring.scale.setScalar(1 + Math.sin(t * 0.8) * 0.04);
-        ring.material.opacity = 0.12 + Math.sin(t * 0.8) * 0.04;
-
-        // Ground subtle pulse
-        ground.material.opacity = 0.2 + Math.sin(t * 0.5) * 0.04;
-
-        // Camera subtle follow
-        camera.position.x = targetRotY * 0.4;
-        camera.position.y = 2 + targetRotX * 0.3;
-        camera.lookAt(0, 0.3, 0);
-
-        renderer.render(scene, camera);
-      }
-
-      function targetRotateX(base, target, t) {
-        return base + (target - base) * (1 - Math.exp(-0.06));
-      }
-
-      function targetRotateY(base, target, t) {
-        return base + (target - base) * (1 - Math.exp(-0.06));
-      }
-
-      // ---- Start ----
-      animate();
-
-      // ---- Hide loading ----
-      const loading = document.getElementById('loading');
-      if (loading) {
-        setTimeout(() => {
-          loading.classList.add('hidden');
-          setTimeout(() => loading.remove(), 700);
-        }, 1600);
-      }
-    })();
-
-    // ============================================================
-    // REVEAL ON SCROLL — IntersectionObserver
-    // ============================================================
-
-    (function () {
-      if (typeof IntersectionObserver === 'undefined') {
-        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('visible'));
-        return;
-      }
-
-      const revealEls = document.querySelectorAll('[data-reveal]');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
-      });
-
-      revealEls.forEach(el => observer.observe(el));
-
-      // Force hero elements visible after a beat if observer missed them
-      setTimeout(() => {
-        document.querySelectorAll('.hero-eyebrow, .hero-title, .hero-sub, .hero-actions')
-          .forEach(el => el.classList.add('visible'));
-      }, 2000);
-    })();
-
-    // ============================================================
-    // SMOOTH SCROLL — native anchor smoothing (noscript-safe)
-    // ============================================================
-
-    (function () {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-          const href = anchor.getAttribute('href');
-          if (href === '#') return;
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            const offset = 80; // nav height
-            const y = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-          }
-        });
-      });
-    })();
-  </script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
