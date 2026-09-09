@@ -113,3 +113,16 @@ public/             static files copied verbatim (favicon, icons, og-image, robo
 - YouTube videos load only on click (privacy-friendly `youtube-nocookie` embeds).
 - `prefers-reduced-motion` disables the preloader, smooth scroll, WebGL loop and all reveals.
 - Keyboard reachable throughout; visible focus rings; skip link to the work.
+
+## SEO / GEO launch checklist
+
+Done in the build:
+
+- ✅ Canonical + OG/Twitter cards, absolute URLs matching the serving domain
+- ✅ JSON-LD graph: Person (birth date/place, sameAs → all 6 profiles), ProfessionalService, WebSite, VideoObject ×5, FAQPage
+- ✅ Exactly one H1, logical H2/H3 outline; every image has alt text
+- ✅ geo.region / geo.position meta (Bloemfontein, ZA) + city in copy
+- ✅ robots.txt explicitly allows Googlebot, Bingbot **and** AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended)
+- ✅ `llms.txt` at the root — structured facts for AI assistants to quote
+- ✅ `sitemap.xml`, `robots.txt`, security `_headers`, path-agnostic build
+- ✅ Bing IndexNow key file at the root
