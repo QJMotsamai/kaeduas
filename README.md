@@ -24,24 +24,22 @@ npm run build    # production build → dist/
 npm run preview  # serve the production build
 ```
 
-## Deploy to Cloudflare Pages (step by step)
+## Hosting — GitHub Pages (primary, simplest)
 
-1. **Push this repo to GitHub** — it lives at `github.com/QJMotsamai/kaeduas`.
-2. Go to [pages.cloudflare.com](https://pages.cloudflare.com) → sign up / log in.
-3. **Create a project** → *Connect to Git* → authorise GitHub → pick the `kaeduas` repo.
-4. Build settings:
-   - Framework preset: **Vite**
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-5. **Save and deploy.** First build takes about a minute. You get `kaeduas.pages.dev`.
-6. **Custom domain**: project → *Custom domains* → set `kaeduas.is-a.dev`
-   (do this *after* the is-a.dev pull request below is merged — Cloudflare verifies ownership
-   by the DNS record the PR creates).
+The `deploy` branch holds the **pre-built site** (nothing to compile). To put it live:
 
-## Register kaeduas.is-a.dev (step by step)
+1. Open **github.com/QJMotsamai/kaeduas** → **Settings** → **Pages** (left sidebar)
+2. **Source:** *Deploy from a branch*
+3. **Branch:** `deploy` → **Save**
+4. ~1 minute later the site is live at `https://qjmotsamai.github.io/kaeduas/`
+
+Every future push to `deploy` redeploys automatically. The build is path-agnostic
+(relative `base: './'`), so it works from the `/kaeduas/` subpath or any domain root.
+
+## Custom domain — kaeduas.is-a.dev (after Pages is live)
 
 1. Fork [is-a-dev/register](https://github.com/is-a-dev/register).
-2. In your fork, add a new file: `domains/kaeduas.json`:
+2. Add `domains/kaeduas.json` in your fork:
 
    ```json
    {
@@ -50,15 +48,21 @@ npm run preview  # serve the production build
        "email": "motsamai.main@gmail.com"
      },
      "record": {
-       "CNAME": "kaeduas.pages.dev"
+       "CNAME": "qjmotsamai.github.io"
      }
    }
    ```
+3. Open a pull request titled `Register kaeduas` and wait for the merge.
+4. In the kaeduas repo → **Settings → Pages → Custom domain** → `kaeduas.is-a.dev` → wait for the DNS check → **Enforce HTTPS**.
 
-   *(Use the `*.pages.dev` URL Cloudflare gave you in the deploy step.)*
-3. Open a pull request to `is-a-dev/register` with the title `Register kaeduas`.
-4. Checks must pass; a maintainer merges it (usually within a day or two).
-5. Back in Cloudflare → *Custom domains* → add `kaeduas.is-a.dev`. Done.
+## Alternative — Cloudflare Pages (optional)
+
+Only needed if you later want `kaeduas.pages.dev` in front. Create a **Pages**
+(not Workers) project, connect the repo, set the production branch to `deploy`
+with **no build command** and output `/` — or point it at
+`arena/01a0860a-kaeduas` with `npm run build` → `dist`. Note: the quick
+"Deploy" button on the Workers screen does **not** run builds and always grabs
+`main` — avoid it.
 
 ## Where things live
 
