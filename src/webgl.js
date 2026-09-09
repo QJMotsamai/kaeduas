@@ -66,10 +66,10 @@ export function initWebGL(canvas) {
   });
 
   const SLABS = [
-    { baseY: 1.86, x: 0.55, phase: 0.0 },
-    { baseY: 0.62, x: -0.55, phase: 1.7 },
-    { baseY: -0.62, x: 0.55, phase: 3.1 },
-    { baseY: -1.86, x: -0.55, phase: 4.6 }
+    { baseY: 1.86, x: -1.05, phase: 0.0 },
+    { baseY: 0.62, x: -0.35, phase: 1.7 },
+    { baseY: -0.62, x: 0.35, phase: 3.1 },
+    { baseY: -1.86, x: 1.05, phase: 4.6 }
   ];
 
   const slabs = SLABS.map((s) => {
