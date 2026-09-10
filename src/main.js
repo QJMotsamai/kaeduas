@@ -129,3 +129,29 @@ if (reduced || !loader) {
     ease: 'power3.out'
   }, 0);
 }
+
+// ==========================================================================
+// Brief form — composes a pre-filled email client-side.
+// No backend, nothing stored: the submit simply opens the visitor's
+// email app with everything from the form already written in.
+// ==========================================================================
+const briefForm = document.getElementById('brief-form');
+if (briefForm) {
+  briefForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(briefForm);
+    const subject = `Project brief \u2014 Kaeduas (${data.get('need') || 'new'})`;
+    const body = [
+      `Name: ${data.get('name') || ''}`,
+      `From: ${data.get('from') || ''}`,
+      `Needs: ${data.get('need') || ''}`,
+      `Engagement: ${data.get('engagement') || ''}`,
+      '',
+      'Brief:',
+      data.get('brief') || '',
+      '',
+      '\u2014 via the kaeduas brief form'
+    ].join('\n');
+    window.location.href = `mailto:motsamai.main@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
