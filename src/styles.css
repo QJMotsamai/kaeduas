@@ -607,6 +607,72 @@ em { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
 .no-js .reveal-fade, .reduced .reveal-fade { opacity: 1; transform: none; }
 html:not(.js) .reveal-fade { opacity: 1; transform: none; }
 
+/* ---------- Work note (spec labelling) ---------- */
+
+.work-note {
+  max-width: 64ch; color: var(--ash);
+  font-size: 1rem; line-height: 1.7;
+  margin: clamp(1rem, 2vh, 1.5rem) 0 clamp(2.5rem, 6vh, 4rem);
+}
+
+/* ---------- Engagement models ---------- */
+
+.engage-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-top: clamp(2.5rem, 6vh, 4.5rem);
+}
+.engage-card {
+  display: flex; flex-direction: column; gap: 0.7rem;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  border: 1px solid var(--line); border-radius: 8px;
+  background: var(--carbon);
+  transition: border-color 0.4s, transform 0.5s var(--ease-out);
+}
+.engage-card:hover { border-color: rgba(217, 97, 47, 0.55); transform: translateY(-4px); }
+.engage-index { color: var(--ember); }
+.engage-card h3 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.2rem; letter-spacing: -0.01em;
+}
+.engage-card p { color: var(--slate); font-size: 0.95rem; line-height: 1.65; }
+
+/* ---------- Brief form ---------- */
+
+.brief-form {
+  display: flex; flex-direction: column; gap: 1.1rem;
+  max-width: 56rem; margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+.brief-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.brief-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.brief-key { color: var(--slate); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.brief-form input, .brief-form select, .brief-form textarea {
+  font-family: var(--font-body); font-size: 0.95rem; color: var(--bone);
+  background: var(--carbon); border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.8rem 0.95rem; width: 100%;
+  transition: border-color 0.3s;
+}
+.brief-form input::placeholder, .brief-form textarea::placeholder { color: var(--slate); }
+.brief-form input:focus, .brief-form select:focus, .brief-form textarea:focus {
+  outline: none; border-color: var(--ember);
+}
+.brief-form textarea { resize: vertical; min-height: 6rem; }
+.brief-form select {
+  appearance: none; -webkit-appearance: none; cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ash) 50%),
+    linear-gradient(135deg, var(--ash) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 55%, calc(100% - 13px) 55%;
+  background-size: 5px 5px; background-repeat: no-repeat;
+}
+.brief-form .btn { border: none; cursor: pointer; align-self: flex-start; }
+.brief-note { color: var(--slate); font-size: 0.68rem; letter-spacing: 0.1em; }
+.procure-facts { margin-top: clamp(2.5rem, 6vh, 4rem); }
+
+@media (max-width: 64rem) {
+  .engage-grid { grid-template-columns: 1fr; }
+  .brief-row { grid-template-columns: 1fr; }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 64rem) {
