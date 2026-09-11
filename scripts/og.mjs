@@ -1,7 +1,7 @@
 // Renders the brand OG image and PWA icons from SVG — pixel-exact type,
 // no rasterization surprises. Run: npm run og
 import sharp from 'sharp';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -23,6 +23,23 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 </svg>`;
 await sharp(Buffer.from(favicon)).resize(512, 512).png().toFile(join(pub, 'icon-512.png'));
 await sharp(Buffer.from(favicon)).resize(192, 192).png().toFile(join(pub, 'icon-192.png'));
+
+// favicon.ico: a single 48x48 PNG wrapped in an ICO container. Browsers and
+// search engines fall back to /favicon.ico when the <link> tags are missed,
+// so this file must exist at the site root.
+const icoPng = await sharp(Buffer.from(favicon)).resize(48, 48).png().toBuffer();
+const icoHeader = Buffer.alloc(6);
+icoHeader.writeUInt16LE(0, 0);            // reserved
+icoHeader.writeUInt16LE(1, 2);            // type: icon
+icoHeader.writeUInt16LE(1, 4);            // image count
+const icoEntry = Buffer.alloc(16);
+icoEntry.writeUInt8(48, 0);               // width
+icoEntry.writeUInt8(48, 1);               // height
+icoEntry.writeUInt16LE(1, 4);             // color planes
+icoEntry.writeUInt16LE(32, 6);            // bits per pixel
+icoEntry.writeUInt32LE(icoPng.length, 8); // image size
+icoEntry.writeUInt32LE(22, 12);           // image offset (6 + 16)
+await writeFile(join(pub, 'favicon.ico'), Buffer.concat([icoHeader, icoEntry, icoPng]));
 
 // 1200x630 OG card — layers, ember glow, exact typography
 const og = `
@@ -68,4 +85,4 @@ const og = `
 </svg>`;
 await sharp(Buffer.from(og)).png({ quality: 92 }).toFile(join(pub, 'og-image.png'));
 
-console.log('✓ icon-192.png, icon-512.png, og-image.png rendered to public/');
+console.log('✓ icon-192.png, icon-512.png, favicon.ico, og-image.png rendered to public/');

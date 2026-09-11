@@ -140,7 +140,7 @@ if (briefForm) {
   briefForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = new FormData(briefForm);
-    const subject = `Project brief \u2014 Kaeduas (${data.get('need') || 'new'})`;
+    const subject = `Project brief for Kaeduas (${data.get('need') || 'new'})`;
     const body = [
       `Name: ${data.get('name') || ''}`,
       `From: ${data.get('from') || ''}`,
@@ -150,7 +150,7 @@ if (briefForm) {
       'Brief:',
       data.get('brief') || '',
       '',
-      '\u2014 via the kaeduas brief form'
+      '(via the Kaeduas brief form)'
     ].join('\n');
     window.location.href = `mailto:motsamai.main@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });

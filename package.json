@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Kaeduas — the creative AI studio of Qophe Junior Motsamai. Generative video, AI advertising, brand design and web systems.",
+  "description": "Kaeduas, the AI entertainment studio of Qophe Junior Motsamai. Generative video, AI advertising, brand design and web systems.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
