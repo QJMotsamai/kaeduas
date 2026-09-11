@@ -35,3 +35,30 @@ The `deploy` branch holds the **pre-built site** (nothing to compile). To put it
 
 Every future push to `deploy` redeploys automatically. The build is path-agnostic
 (relative `base: './'`), so it works from the `/kaeduas/` subpath or any domain root.
+
+### Shipping an update
+
+**Automatic (default).** Merging to `main` runs `.github/workflows/deploy.yml`,
+which builds the site and pushes the compiled output to `deploy`. Main, deploy and
+the live site stay in sync — no manual step.
+
+**Manual**, from a clean `main`:
+
+```bash
+npm run deploy                        # build + push to the deploy branch
+npm run deploy -- --message "Deploy: schema pass"   # custom commit message
+npm run deploy -- --no-build          # push whatever is already in dist/
+npm run deploy -- --dry-run           # build + stage, show the diff, push nothing
+```
+
+`scripts/deploy.mjs` builds `dist/`, clones `deploy` into a temp directory,
+overwrites it with the fresh build, commits and pushes. Your working tree is
+never touched, and it bails out if the build is missing or has no JSON-LD.
+
+## Structured data
+
+The single JSON-LD `@graph` in `index.html` is the source of truth for how search
+engines and AI assistants read the studio: a `Person` (QJ), the `ProfessionalService`
+(Kaeduas, including `foundingDate` and `founder`), the `WebSite`, an `ItemList` of
+spec-concept `VideoObject`s, and the `FAQPage`. `public/llms.txt` mirrors the same
+facts in plain text for AI crawlers — if you change one, change both.

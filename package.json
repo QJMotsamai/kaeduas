@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "og": "node scripts/og.mjs"
+    "og": "node scripts/og.mjs",
+    "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "gsap": "^3.12.5",
