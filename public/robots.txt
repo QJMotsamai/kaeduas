@@ -1,4 +1,4 @@
-# Kaeduas — crawl & AI policy: open by design
+# Kaeduas: crawl & AI policy, open by design
 User-agent: *
 Allow: /
 
