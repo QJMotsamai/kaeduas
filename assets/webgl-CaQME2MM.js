@@ -1,4 +1,4 @@
-import{g as hr}from"./index-C08RDGj3.js";/**
+import{g as hr}from"./index-DYCiJ5bM.js";/**
  * @license
  * Copyright 2010-2024 Three.js Authors
  * SPDX-License-Identifier: MIT
