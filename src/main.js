@@ -12,6 +12,7 @@ import {
   initCursor, initMagnetic, initMenu,
   initFacades, initClock, initHeader, initToTop
 } from './ui.js';
+import { initQuiz } from './quiz/quiz.js';
 import './styles.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -88,6 +89,7 @@ initFacades();
 initClock();
 initHeader();
 initToTop(scrollToTarget);
+initQuiz();
 
 /* ---------- Preloader ---------- */
 
