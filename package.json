@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "og": "node scripts/og.mjs",
     "deploy": "node scripts/deploy.mjs",
-    "render:photo-art": "node scripts/create-photo-art.mjs"
+    "render:photo-art": "node scripts/create-photo-art.mjs",
+    "render:category-art": "node scripts/create-category-art.mjs"
   },
   "dependencies": {
     "gsap": "^3.12.5",

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600">
+    <rect width="480" height="600" fill="#F2F0EB"/>
+    <rect x="20" y="20" width="440" height="560" fill="none" stroke="#0B0B0C" stroke-width="1.5"/>
+    <rect x="20" y="20" width="440" height="12" fill="#D9612F"/>
+    <g transform="translate(42 64) scale(0.42)" fill="#0B0B0C">
+    <rect x="0" y="0" width="72" height="17"/><rect x="9.5" y="24" width="72" height="17"/>
+    <rect x="18.5" y="48" width="72" height="17"/><rect x="27.5" y="72" width="72" height="17"/>
+  </g><text x="92" y="94" font-family="Archivo,Arial,sans-serif" font-size="25" font-weight="600" letter-spacing="5" fill="#0B0B0C">KAEDUAS</text>
+    <text x="42" y="159" font-family="'JetBrains Mono',Consolas,monospace" font-size="10" letter-spacing="2" fill="#72727A">A CREATIVE PRACTICE</text>
+    <text x="42" y="279" font-family="Archivo,Arial,sans-serif" font-size="48" font-weight="600" letter-spacing="-2" fill="#0B0B0C">CLEAR IDEAS.</text>
+    <text x="42" y="348" font-family="Archivo,Arial,sans-serif" font-size="42" font-weight="500" letter-spacing="-1.7" fill="#0B0B0C">CONSIDERED</text>
+    <text x="42" y="408" font-family="'Instrument Serif',Georgia,serif" font-size="76" font-style="italic" fill="#D9612F">craft.</text>
+    <path d="M42 451H438" stroke="#0B0B0C" stroke-width="1"/>
+    <text x="42" y="494" font-family="'JetBrains Mono',Consolas,monospace" font-size="11" letter-spacing="1.8" fill="#0B0B0C">QJ MOTSAMAI / SOUTH AFRICA</text>
+    <text x="42" y="535" font-family="'JetBrains Mono',Consolas,monospace" font-size="9" letter-spacing="1.4" fill="#72727A">STUDIO POSTER / SELF-INITIATED</text>
+  </svg>

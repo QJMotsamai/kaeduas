@@ -41,40 +41,21 @@ icoEntry.writeUInt32LE(icoPng.length, 8); // image size
 icoEntry.writeUInt32LE(22, 12);           // image offset (6 + 16)
 await writeFile(join(pub, 'favicon.ico'), Buffer.concat([icoHeader, icoEntry, icoPng]));
 
-// 1200x630 social card: the photographic studio image, art-directed with a quiet title lockup.
-const hero = await sharp(join(pub, 'editorial', 'studio-hero.jpg'))
-  .resize(1200, 630, { fit: 'cover', position: 'centre' })
-  .modulate({ saturation: 0.72, brightness: 0.78 })
-  .jpeg({ quality: 90, mozjpeg: true })
-  .toBuffer();
-const ogOverlay = `
+// 1200x630 social card: a restrained typographic identity card, no stock imagery.
+const og = `
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#0B0B0C" stop-opacity=".86"/>
-      <stop offset=".52" stop-color="#0B0B0C" stop-opacity=".56"/>
-      <stop offset="1" stop-color="#0B0B0C" stop-opacity=".16"/>
-    </linearGradient>
-    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-      <stop offset=".42" stop-color="#0B0B0C" stop-opacity="0"/>
-      <stop offset="1" stop-color="#0B0B0C" stop-opacity=".65"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#wash)"/>
-  <rect width="1200" height="630" fill="url(#ground)"/>
-  <g fill="#F2F0EB" transform="translate(74 66)">
-    <rect x="0" y="0" width="44" height="10"/><rect x="6" y="16" width="44" height="10"/>
-    <rect x="12" y="32" width="44" height="10"/><rect x="18" y="48" width="44" height="10"/>
+  <rect width="1200" height="630" fill="#0B0B0C"/>
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#2B2B2F" stroke-width="1"/>
+  <g transform="translate(84 92)" fill="#D9612F">
+    <rect x="0" y="0" width="76" height="18"/><rect x="10" y="26" width="76" height="18"/>
+    <rect x="20" y="52" width="76" height="18"/><rect x="30" y="78" width="76" height="18"/>
   </g>
-  <text x="150" y="107" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="22" letter-spacing="8" font-weight="600" fill="#F2F0EB">KAEDUAS</text>
-  <text x="74" y="320" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="112" font-weight="500" letter-spacing="-4" fill="#F2F0EB">Design with</text>
-  <text x="74" y="434" font-family="Georgia,serif" font-size="112" font-style="italic" letter-spacing="-3" fill="#D9612F">feeling.</text>
-  <line x1="74" y1="504" x2="1126" y2="504" stroke="#F2F0EB" stroke-opacity=".38"/>
-  <text x="74" y="550" font-family="JetBrains Mono,monospace" font-size="17" letter-spacing="2.6" fill="#F2F0EB">GRAPHIC DESIGN · CONTENT STRATEGY · GENERATIVE VIDEO</text>
+  <text x="206" y="162" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="29" font-weight="600" letter-spacing="12" fill="#F2F0EB">KAEDUAS</text>
+  <text x="84" y="330" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="92" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Graphic design.</text>
+  <text x="84" y="430" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="76" font-weight="500" letter-spacing="-2" fill="#D9612F">Generative video.</text>
+  <line x1="84" y1="496" x2="1116" y2="496" stroke="#45454A" stroke-width="1"/>
+  <text x="84" y="546" font-family="JetBrains Mono,monospace" font-size="17" letter-spacing="3" fill="#A0A0A8">QJ MOTSAMAI  /  SOUTH AFRICA</text>
 </svg>`;
-await sharp(hero)
-  .composite([{ input: Buffer.from(ogOverlay), top: 0, left: 0 }])
-  .png()
-  .toFile(join(pub, 'og-image.png'));
+await sharp(Buffer.from(og)).png({ quality: 92 }).toFile(join(pub, 'og-image.png'));
 
 console.log('✓ icon-192.png, icon-512.png, favicon.ico, og-image.png rendered to public/');

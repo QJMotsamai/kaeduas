@@ -16,6 +16,7 @@ from reportlab.lib.styles import ParagraphStyle
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "downloads"
 ART = ROOT / "public" / "design-work"
+PREVIEW_ART = ROOT / "scratch" / "category-art"
 OUT.mkdir(parents=True, exist_ok=True)
 W, H = A4
 FONT = Path("/usr/share/fonts/truetype/dejavu")
@@ -342,12 +343,12 @@ def oruvi_book(path):
     base_page(c, False, "04 — Digital & print", 5)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "04 — DIGITAL & PRINT")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 28); c.drawString(48, H - 108, "Give the idea room to land.")
-    image_contain(c, ART / "oruvi-digital.jpg", 52, 304, 212, 345, ORUVI_LIME)
-    image_contain(c, ART / "oruvi-print.jpg", 282, 304, 261, 345, ORUVI_INK)
+    image_contain(c, PREVIEW_ART / "oruvi-digital.png", 52, 304, 212, 345, ORUVI_LIME)
+    image_contain(c, PREVIEW_ART / "oruvi-print.png", 282, 304, 261, 345, ORUVI_INK)
     label(c, "Digital", 52, 280, ORUVI_ORANGE)
     label(c, "Print", 282, 280, ORUVI_ORANGE)
     para(c, "One strong thought. One flavour cue. Built for a thumb-first feed.", 52, 263, 212, dark=False, size=8.5, leading=12)
-    para(c, "A photographic poster with confident hierarchy, readable at a glance and considered up close.", 282, 263, 260, dark=False, size=8.5, leading=12)
+    para(c, "A direct poster hierarchy, built for quick reading in print and at a distance.", 282, 263, 260, dark=False, size=8.5, leading=12)
     c.showPage()
     # 06 pack
     base_page(c, False, "05 — Packaging", 6)
@@ -360,10 +361,11 @@ def oruvi_book(path):
     base_page(c, False, "06 — In store", 7)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "06 — IN STORE")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 28); c.drawString(48, H - 109, "The brand, in the room.")
-    image_contain(c, ART / "oruvi-point-of-sale.jpg", 48, H - 390, W - 96, 242, ORUVI_PALE)
-    label(c, "Point-of-sale · counter display", 48, H - 414, ORUVI_ORANGE)
-    image_contain(c, ART / "oruvi-retail-branded.jpg", 48, H - 678, W - 96, 242, ORUVI_PALE)
-    label(c, "Retail activation · tasting experience", 48, H - 702, ORUVI_ORANGE)
+    image_contain(c, PREVIEW_ART / "oruvi-pos.png", 48, H - 456, 242, 302, ORUVI_PALE)
+    image_contain(c, PREVIEW_ART / "oruvi-retail.png", 306, H - 456, 242, 302, ORUVI_PALE)
+    label(c, "Point-of-sale · shelf card", 48, H - 481, ORUVI_ORANGE)
+    label(c, "Retail activation · tasting bar", 306, H - 481, ORUVI_ORANGE)
+    para(c, "Typography-led sign concepts for a counter, shelf and in-store tasting point. No client or commercial product is implied.", 48, H - 518, W - 96, dark=False, size=9, leading=14)
     c.showPage()
     # 08 scope and disclosure
     base_page(c, False, "07 — Concept notes", 8)

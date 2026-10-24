@@ -42,35 +42,12 @@ function splitWords(el) {
   return el.querySelectorAll('.wi');
 }
 
-/** Brief, restrained entrance to the photographic opening. */
+/** Brief, restrained entrance for the opening copy. */
 export function heroIntro() {
   if (reduced) return;
-
-  const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
-
-  tl.fromTo('.hero-overline',
-    { autoAlpha: 0, y: 14 },
-    { autoAlpha: 1, y: 0, duration: 0.9 },
-    0.15
-  );
-
-  tl.fromTo('.hero-title .line-inner',
-    { yPercent: 112 },
-    { yPercent: 0, duration: 1.35, stagger: 0.11 },
-    0.1
-  );
-
-  tl.fromTo(['.hero-sub', '.hero-ctas'],
-    { autoAlpha: 0, y: 26 },
-    { autoAlpha: 1, y: 0, duration: 1.0, stagger: 0.12 },
-    0.65
-  );
-
-  tl.fromTo('.hero-foot',
-    { autoAlpha: 0 },
-    { autoAlpha: 1, duration: 1.0 },
-    0.9
-  );
+  gsap.fromTo('.hero-overline', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.45, ease: 'power2.out' });
+  gsap.fromTo('.hero-title', { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.6, delay: 0.05, ease: 'power2.out' });
+  gsap.fromTo('.hero-side', { autoAlpha: 0, y: 8 }, { autoAlpha: 1, y: 0, duration: 0.5, delay: 0.18, ease: 'power2.out' });
 }
 
 /** Everything driven by scroll position. */
