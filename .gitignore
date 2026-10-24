@@ -2,3 +2,7 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Local PDF/reference rendering and Python design-tool environment
+scratch/
+.venv/

@@ -161,3 +161,12 @@ export function initToTop(scrollTop) {
   const btn = document.getElementById('to-top');
   if (btn) btn.addEventListener('click', () => scrollTop(0));
 }
+
+
+/* ---------- Replaceable graphic-design previews ---------- */
+
+export function initDesignGallery() {
+  document.querySelectorAll('.design-art-image').forEach((img) => {
+    img.addEventListener('error', () => { img.hidden = true; }, { once: true });
+  });
+}

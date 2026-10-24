@@ -74,12 +74,12 @@ const og = `
   <!-- wordmark -->
   <g font-family="Archivo, Helvetica, Arial, sans-serif">
     <text x="72" y="128" font-size="28" letter-spacing="14" font-weight="600" fill="#D9612F">KAEDUAS</text>
-    <text x="72" y="278" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Build. Create.</text>
-    <text x="72" y="392" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Entertain. Inform.</text>
-    <text x="72" y="506" font-size="104" font-weight="500" letter-spacing="-3" fill="#D9612F">Scale.</text>
+    <text x="72" y="278" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Design. Create.</text>
+    <text x="72" y="392" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Make. Meaning.</text>
+    <text x="72" y="506" font-size="104" font-weight="500" letter-spacing="-3" fill="#D9612F">Matter.</text>
   </g>
 
-  <text x="72" y="578" font-family="JetBrains Mono, monospace" font-size="21" letter-spacing="4" fill="#9B9BA3">GENERATIVE VIDEO · AI ADVERTISING · WEB SYSTEMS</text>
+  <text x="72" y="578" font-family="JetBrains Mono, monospace" font-size="21" letter-spacing="4" fill="#9B9BA3">GRAPHIC DESIGN · CONTENT STRATEGY · GENERATIVE VIDEO</text>
 
   <rect width="1200" height="630" fill="url(#fade)" opacity="0.25"/>
 </svg>`;

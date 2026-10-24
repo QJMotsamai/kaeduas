@@ -10,9 +10,8 @@ import { initWebGL } from './webgl.js';
 import { heroIntro, initScrollAnims } from './anims.js';
 import {
   initCursor, initMagnetic, initMenu,
-  initFacades, initClock, initHeader, initToTop
+  initFacades, initDesignGallery, initClock, initHeader, initToTop
 } from './ui.js';
-import { initQuiz } from './quiz/quiz.js';
 import './styles.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,10 +85,10 @@ initMenu((open) => {
   if (open) lenis.stop(); else lenis.start();
 });
 initFacades();
+initDesignGallery();
 initClock();
 initHeader();
 initToTop(scrollToTarget);
-initQuiz();
 
 /* ---------- Preloader ---------- */
 
@@ -147,7 +146,7 @@ if (briefForm) {
       `Name: ${data.get('name') || ''}`,
       `From: ${data.get('from') || ''}`,
       `Needs: ${data.get('need') || ''}`,
-      `Engagement: ${data.get('engagement') || ''}`,
+
       '',
       'Brief:',
       data.get('brief') || '',
