@@ -1,5 +1,5 @@
 // ==========================================================================
-// KAEDUAS — Scroll & entrance choreography (GSAP + ScrollTrigger)
+// KAEDUAS — restrained entrance and scroll choreography
 // ==========================================================================
 
 import { gsap } from 'gsap';
@@ -42,48 +42,16 @@ function splitWords(el) {
   return el.querySelectorAll('.wi');
 }
 
-/** Hero entrance — called once the preloader lifts. */
+/** Brief, restrained entrance for the opening copy. */
 export function heroIntro() {
   if (reduced) return;
-
-  const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
-
-  tl.fromTo('.hero-overline',
-    { autoAlpha: 0, y: 14 },
-    { autoAlpha: 1, y: 0, duration: 0.9 },
-    0.15
-  );
-
-  tl.fromTo('.hero-title .line-inner',
-    { yPercent: 112 },
-    { yPercent: 0, duration: 1.35, stagger: 0.11 },
-    0.1
-  );
-
-  tl.fromTo(['.hero-sub', '.hero-ctas'],
-    { autoAlpha: 0, y: 26 },
-    { autoAlpha: 1, y: 0, duration: 1.0, stagger: 0.12 },
-    0.65
-  );
-
-  tl.fromTo('.hero-foot',
-    { autoAlpha: 0 },
-    { autoAlpha: 1, duration: 1.0 },
-    0.9
-  );
+  gsap.fromTo('.hero-overline', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.45, ease: 'power2.out' });
+  gsap.fromTo('.hero-title', { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.6, delay: 0.05, ease: 'power2.out' });
+  gsap.fromTo('.hero-side', { autoAlpha: 0, y: 8 }, { autoAlpha: 1, y: 0, duration: 0.5, delay: 0.18, ease: 'power2.out' });
 }
 
 /** Everything driven by scroll position. */
-export function initScrollAnims(webgl) {
-  // Hero canvas reacts to scroll even if ScrollTrigger-only animations are off
-  ScrollTrigger.create({
-    trigger: '.hero',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: true,
-    onUpdate: (self) => webgl.setScroll(self.progress)
-  });
-
+export function initScrollAnims() {
   if (reduced) return;
 
   // Section rules draw in
@@ -124,26 +92,6 @@ export function initScrollAnims(webgl) {
       }
     );
   });
-
-  // Studio statement — words ignite as you scroll through (scrubbed)
-  const statement = document.querySelector('.statement');
-  if (statement) {
-    const words = splitWords(statement);
-    gsap.fromTo(words,
-      { opacity: 0.14 },
-      {
-        opacity: 1,
-        ease: 'none',
-        stagger: 0.06,
-        scrollTrigger: {
-          trigger: statement,
-          start: 'top 78%',
-          end: 'bottom 42%',
-          scrub: true
-        }
-      }
-    );
-  }
 
   // Generic fade-ups
   gsap.utils.toArray('.reveal-fade').forEach((el) => {
@@ -194,25 +142,4 @@ export function initScrollAnims(webgl) {
     }
   );
 
-  // Slight skew on work cards with scroll velocity — the "reactive" feel
-  const proxy = { skew: 0 };
-  const skewSetters = gsap.utils.toArray('.work-media').map((el) => gsap.quickSetter(el, 'skewY', 'deg'));
-  ScrollTrigger.create({
-    trigger: '.work-list',
-    start: 'top bottom',
-    end: 'bottom top',
-    onUpdate: (self) => {
-      const skew = gsap.utils.clamp(-4, 4, self.getVelocity() / -350);
-      if (Math.abs(skew) > Math.abs(proxy.skew)) {
-        proxy.skew = skew;
-        gsap.to(proxy, {
-          skew: 0,
-          duration: 0.7,
-          ease: 'power3',
-          overwrite: true,
-          onUpdate: () => skewSetters.forEach((set) => set(proxy.skew))
-        });
-      }
-    }
-  });
 }

@@ -10,12 +10,12 @@
     "preview": "vite preview",
     "og": "node scripts/og.mjs",
     "deploy": "node scripts/deploy.mjs",
-    "render:design": "node scripts/render-design-assets.mjs"
+    "render:photo-art": "node scripts/create-photo-art.mjs",
+    "render:category-art": "node scripts/create-category-art.mjs"
   },
   "dependencies": {
     "gsap": "^3.12.5",
-    "lenis": "^1.1.14",
-    "three": "0.170.0"
+    "lenis": "^1.1.14"
   },
   "devDependencies": {
     "sharp": "^0.33.5",

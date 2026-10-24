@@ -41,47 +41,20 @@ icoEntry.writeUInt32LE(icoPng.length, 8); // image size
 icoEntry.writeUInt32LE(22, 12);           // image offset (6 + 16)
 await writeFile(join(pub, 'favicon.ico'), Buffer.concat([icoHeader, icoEntry, icoPng]));
 
-// 1200x630 OG card — layers, ember glow, exact typography
+// 1200x630 social card: a restrained typographic identity card, no stock imagery.
 const og = `
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <radialGradient id="glow" cx="0.82" cy="0.2" r="0.9">
-      <stop offset="0" stop-color="#3a1d10"/>
-      <stop offset="0.5" stop-color="#160f0c"/>
-      <stop offset="1" stop-color="#0a0a0b"/>
-    </radialGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9E3F1E"/>
-      <stop offset="0.55" stop-color="#D9612F"/>
-      <stop offset="1" stop-color="#F07A45"/>
-    </linearGradient>
-    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0a0a0b" stop-opacity="0"/>
-      <stop offset="1" stop-color="#0a0a0b" stop-opacity="0.9"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1200" height="630" fill="url(#glow)"/>
-
-  <!-- stacked layers, top right, brand staircase geometry -->
-  <g transform="translate(773,58)" opacity="0.98">
-    <rect x="0"   y="0"   width="310" height="36" rx="2" fill="#E5703C"/>
-    <rect x="39"  y="58"  width="310" height="36" rx="2" fill="#C2531F"/>
-    <rect x="78"  y="116" width="310" height="36" rx="2" fill="#9E3F1E"/>
-    <rect x="117" y="174" width="310" height="36" rx="2" fill="#712D12"/>
+  <rect width="1200" height="630" fill="#0B0B0C"/>
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#2B2B2F" stroke-width="1"/>
+  <g transform="translate(84 92)" fill="#D9612F">
+    <rect x="0" y="0" width="76" height="18"/><rect x="10" y="26" width="76" height="18"/>
+    <rect x="20" y="52" width="76" height="18"/><rect x="30" y="78" width="76" height="18"/>
   </g>
-
-  <!-- wordmark -->
-  <g font-family="Archivo, Helvetica, Arial, sans-serif">
-    <text x="72" y="128" font-size="28" letter-spacing="14" font-weight="600" fill="#D9612F">KAEDUAS</text>
-    <text x="72" y="278" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Design. Create.</text>
-    <text x="72" y="392" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Make. Meaning.</text>
-    <text x="72" y="506" font-size="104" font-weight="500" letter-spacing="-3" fill="#D9612F">Matter.</text>
-  </g>
-
-  <text x="72" y="578" font-family="JetBrains Mono, monospace" font-size="21" letter-spacing="4" fill="#9B9BA3">GRAPHIC DESIGN · CONTENT STRATEGY · GENERATIVE VIDEO</text>
-
-  <rect width="1200" height="630" fill="url(#fade)" opacity="0.25"/>
+  <text x="206" y="162" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="29" font-weight="600" letter-spacing="12" fill="#F2F0EB">KAEDUAS</text>
+  <text x="84" y="330" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="92" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Graphic design.</text>
+  <text x="84" y="430" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="76" font-weight="500" letter-spacing="-2" fill="#D9612F">Generative video.</text>
+  <line x1="84" y1="496" x2="1116" y2="496" stroke="#45454A" stroke-width="1"/>
+  <text x="84" y="546" font-family="JetBrains Mono,monospace" font-size="17" letter-spacing="3" fill="#A0A0A8">QJ MOTSAMAI  /  SOUTH AFRICA</text>
 </svg>`;
 await sharp(Buffer.from(og)).png({ quality: 92 }).toFile(join(pub, 'og-image.png'));
 
