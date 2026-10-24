@@ -160,8 +160,8 @@ em { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
 .hero-frame {
   width: 100%; max-width: 96rem; margin: 0 auto;
   display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(15rem, .7fr);
-  grid-template-rows: auto auto; align-items: end; column-gap: clamp(2rem, 6vw, 6rem); row-gap: 2.2rem;
-  padding: clamp(7.5rem, 14vh, 10rem) clamp(1.25rem, 6vw, 6rem) clamp(3.5rem, 8vh, 6rem);
+  grid-template-rows: auto auto; align-items: end; column-gap: clamp(2rem, 6vw, 6rem); row-gap: 1.25rem;
+  padding: 5.75rem clamp(1.25rem, 6vw, 6rem) 2rem;
 }
 .hero-overline { grid-column: 1 / -1; grid-row: 1; color: var(--ash); }
 .hero-title {
@@ -507,7 +507,7 @@ html:not(.js) .reveal-fade { opacity: 1; transform: none; }
   .work-card { grid-template-columns: 1fr; gap: 1.2rem; align-items: start; }
   .action-grid { grid-template-columns: 1fr; }
   .design-rail { grid-auto-columns: minmax(23rem, 74vw); }
-  .hero-frame { grid-template-columns: 1fr; grid-template-rows: auto auto auto; row-gap: 1.5rem; padding-top: 7.5rem; padding-bottom: 3.5rem; }
+  .hero-frame { grid-template-columns: 1fr; grid-template-rows: auto auto auto; row-gap: 1.1rem; padding-top: 6rem; padding-bottom: 2.5rem; }
   .hero-overline { grid-column: 1; grid-row: 1; }
   .hero-title { grid-column: 1; grid-row: 2; font-size: clamp(3.15rem, 8.4vw, 5.8rem); }
   .hero-side { grid-column: 1; grid-row: 3; max-width: 34rem; }
@@ -517,7 +517,7 @@ html:not(.js) .reveal-fade { opacity: 1; transform: none; }
 @media (max-width: 40rem) {
   .service-row { grid-template-columns: minmax(0, 1fr); }
   .design-rail { grid-auto-columns: minmax(18.5rem, 88vw); }
-  .hero-frame { padding: 6.5rem 1.25rem 3rem; }
+  .hero-frame { padding: 5rem 1.25rem 2rem; }
   .hero-title { font-size: clamp(1.8rem, 9vw, 3.4rem); }
   .application-pair { gap: .55rem; }
   .application-label, .application-caption { font-size: .5rem; }
