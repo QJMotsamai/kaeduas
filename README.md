@@ -1,6 +1,6 @@
 # Kaeduas — Creative Portfolio
 
-A compact portfolio for **Qophe Junior Motsamai (QJ)**, a South African graphic designer and creative producer.
+A concise portfolio for **Qophe Junior Motsamai (QJ)**, a South African graphic designer and creative producer.
 
 **Graphic design · Social content strategy · Generative video**
 
@@ -14,11 +14,13 @@ npm run dev
 npm run build
 ```
 
-## Portfolio design assets and brand books
+## Portfolio work and brand-book samples
 
-Five editable SVG studies in `public/design-work/` power the horizontal design rail. They are a connected fictional concept identity, ORUVI, and are clearly labelled as not a real product. The downloadable Kaeduas and ORUVI brand guides are in `public/downloads/`; the PDF generator is `scripts/create-guides.py` (requires ReportLab and Pillow). Rebuild the guides with `npm run render:design`, `python -m pip install -r requirements-design.txt`, then `python scripts/create-guides.py`.
+The design section pairs Kaeduas identity applications (studio apparel and a mailer mockup) with ORUVI, a clearly labelled self-initiated spec concept. The ORUVI photo-led horizontal rail covers digital, print, packaging, point-of-sale and retail activation. Product mockups are photographic concept applications, not client work or items for sale.
 
-The artwork and identity guides are portfolio concept work, not client commissions. ORUVI is fictional and would need its own name/claims and trademark checks before any commercial use.
+Generated photographic source scenes are kept in `scripts/assets/`; `npm run render:photo-art` applies exact brand typography and outputs the site-ready images into `public/design-work/`. Rebuild the two downloadable sample guides with `python -m pip install -r requirements-design.txt` followed by `python scripts/create-guides.py` (ReportLab and Pillow required).
+
+The sample PDFs live in `public/downloads/`: the Kaeduas Creative Brand Guide and the ORUVI Spec Concept Brand Guide. ORUVI is not commissioned work; any commercial use would require name, formulation, claims and trademark clearance.
 
 ## Deployment
 

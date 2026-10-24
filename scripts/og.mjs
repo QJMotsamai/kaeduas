@@ -41,48 +41,40 @@ icoEntry.writeUInt32LE(icoPng.length, 8); // image size
 icoEntry.writeUInt32LE(22, 12);           // image offset (6 + 16)
 await writeFile(join(pub, 'favicon.ico'), Buffer.concat([icoHeader, icoEntry, icoPng]));
 
-// 1200x630 OG card — layers, ember glow, exact typography
-const og = `
+// 1200x630 social card: the photographic studio image, art-directed with a quiet title lockup.
+const hero = await sharp(join(pub, 'editorial', 'studio-hero.jpg'))
+  .resize(1200, 630, { fit: 'cover', position: 'centre' })
+  .modulate({ saturation: 0.72, brightness: 0.78 })
+  .jpeg({ quality: 90, mozjpeg: true })
+  .toBuffer();
+const ogOverlay = `
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="glow" cx="0.82" cy="0.2" r="0.9">
-      <stop offset="0" stop-color="#3a1d10"/>
-      <stop offset="0.5" stop-color="#160f0c"/>
-      <stop offset="1" stop-color="#0a0a0b"/>
-    </radialGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9E3F1E"/>
-      <stop offset="0.55" stop-color="#D9612F"/>
-      <stop offset="1" stop-color="#F07A45"/>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B0B0C" stop-opacity=".86"/>
+      <stop offset=".52" stop-color="#0B0B0C" stop-opacity=".56"/>
+      <stop offset="1" stop-color="#0B0B0C" stop-opacity=".16"/>
     </linearGradient>
-    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0a0a0b" stop-opacity="0"/>
-      <stop offset="1" stop-color="#0a0a0b" stop-opacity="0.9"/>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".42" stop-color="#0B0B0C" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B0B0C" stop-opacity=".65"/>
     </linearGradient>
   </defs>
-
-  <rect width="1200" height="630" fill="url(#glow)"/>
-
-  <!-- stacked layers, top right, brand staircase geometry -->
-  <g transform="translate(773,58)" opacity="0.98">
-    <rect x="0"   y="0"   width="310" height="36" rx="2" fill="#E5703C"/>
-    <rect x="39"  y="58"  width="310" height="36" rx="2" fill="#C2531F"/>
-    <rect x="78"  y="116" width="310" height="36" rx="2" fill="#9E3F1E"/>
-    <rect x="117" y="174" width="310" height="36" rx="2" fill="#712D12"/>
+  <rect width="1200" height="630" fill="url(#wash)"/>
+  <rect width="1200" height="630" fill="url(#ground)"/>
+  <g fill="#F2F0EB" transform="translate(74 66)">
+    <rect x="0" y="0" width="44" height="10"/><rect x="6" y="16" width="44" height="10"/>
+    <rect x="12" y="32" width="44" height="10"/><rect x="18" y="48" width="44" height="10"/>
   </g>
-
-  <!-- wordmark -->
-  <g font-family="Archivo, Helvetica, Arial, sans-serif">
-    <text x="72" y="128" font-size="28" letter-spacing="14" font-weight="600" fill="#D9612F">KAEDUAS</text>
-    <text x="72" y="278" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Design. Create.</text>
-    <text x="72" y="392" font-size="104" font-weight="500" letter-spacing="-3" fill="#F2F0EB">Make. Meaning.</text>
-    <text x="72" y="506" font-size="104" font-weight="500" letter-spacing="-3" fill="#D9612F">Matter.</text>
-  </g>
-
-  <text x="72" y="578" font-family="JetBrains Mono, monospace" font-size="21" letter-spacing="4" fill="#9B9BA3">GRAPHIC DESIGN · CONTENT STRATEGY · GENERATIVE VIDEO</text>
-
-  <rect width="1200" height="630" fill="url(#fade)" opacity="0.25"/>
+  <text x="150" y="107" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="22" letter-spacing="8" font-weight="600" fill="#F2F0EB">KAEDUAS</text>
+  <text x="74" y="320" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="112" font-weight="500" letter-spacing="-4" fill="#F2F0EB">Design with</text>
+  <text x="74" y="434" font-family="Georgia,serif" font-size="112" font-style="italic" letter-spacing="-3" fill="#D9612F">feeling.</text>
+  <line x1="74" y1="504" x2="1126" y2="504" stroke="#F2F0EB" stroke-opacity=".38"/>
+  <text x="74" y="550" font-family="JetBrains Mono,monospace" font-size="17" letter-spacing="2.6" fill="#F2F0EB">GRAPHIC DESIGN · CONTENT STRATEGY · GENERATIVE VIDEO</text>
 </svg>`;
-await sharp(Buffer.from(og)).png({ quality: 92 }).toFile(join(pub, 'og-image.png'));
+await sharp(hero)
+  .composite([{ input: Buffer.from(ogOverlay), top: 0, left: 0 }])
+  .png()
+  .toFile(join(pub, 'og-image.png'));
 
 console.log('✓ icon-192.png, icon-512.png, favicon.ico, og-image.png rendered to public/');

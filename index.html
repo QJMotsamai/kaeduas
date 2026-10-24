@@ -27,7 +27,7 @@
   <meta property="og:image" content="https://qjmotsamai.github.io/kaeduas/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Kaeduas mark: four ember-lit layers stacked in the dark." />
+  <meta property="og:image:alt" content="Kaeduas over a cinematic creative studio photograph." />
   <meta property="og:locale" content="en_ZA" />
 
   <!-- Twitter -->
@@ -104,26 +104,6 @@
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
 
-  <!-- Grain -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- Custom cursor -->
-  <div class="cursor" aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"><span class="cursor-label">PLAY</span></div>
-  </div>
-
-  <!-- Preloader -->
-  <div class="loader" aria-hidden="true">
-    <div class="loader-mark">
-      <span class="loader-bar"></span>
-      <span class="loader-bar"></span>
-      <span class="loader-bar"></span>
-      <span class="loader-bar"></span>
-    </div>
-    <div class="loader-count mono">000</div>
-  </div>
-
   <!-- Header -->
   <header class="site-head">
     <a class="brand" href="#top" aria-label="Kaeduas, back to top">
@@ -158,22 +138,21 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" aria-label="Kaeduas, graphic design and creative production">
-      <canvas id="webgl" aria-hidden="true"></canvas>
+      <img class="hero-photo" src="./editorial/studio-hero.jpg" alt="" fetchpriority="high" />
       <div class="hero-frame">
-        <p class="hero-overline mono"><span class="ember-dot" aria-hidden="true"></span>KAEDUAS · GRAPHIC DESIGN & CREATIVE PRODUCTION</p>
+        <p class="hero-overline mono"><span class="ember-dot" aria-hidden="true"></span>KAEDUAS · INDEPENDENT CREATIVE PRACTICE</p>
         <h1 class="hero-title">
-          <span class="line"><span class="line-inner">Design. Create.</span></span>
-          <span class="line"><span class="line-inner">Make. <em>Meaning.</em></span></span>
-          <span class="line"><span class="line-inner"><em class="scale-word">Matter.</em></span></span>
+          <span class="line"><span class="line-inner">Design with</span></span>
+          <span class="line"><span class="line-inner"><em>feeling.</em></span></span>
         </h1>
         <div class="hero-side">
-          <p class="hero-sub">Graphic designer and creative producer <strong>Qophe Junior Motsamai</strong> works across digital, print, packaging and social-first video. Based in South Africa. Available worldwide.</p>
+          <p class="hero-sub">Graphic design and moving image by <strong>Qophe Junior Motsamai</strong> — made hands-on, from first idea to final frame. Based in South Africa; working worldwide.</p>
           <div class="hero-ctas">
-            <a class="btn btn-ember magnetic" href="#contact">
+            <a class="btn btn-ember" href="#contact">
               <span>Book a project</span>
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn-ghost magnetic" href="#work">
+            <a class="btn btn-ghost" href="#work">
               <span>Watch the work</span>
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -185,18 +164,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-run">
-          <span>Graphic design</span><i>▮</i><span>Content strategy</span><i>▮</i><span>Generative video</span><i>▮</i><span>Creative direction</span><i>▮</i><span>Visual storytelling</span><i>▮</i>
-        </span>
-        <span class="marquee-run">
-          <span>Graphic design</span><i>▮</i><span>Content strategy</span><i>▮</i><span>Generative video</span><i>▮</i><span>Creative direction</span><i>▮</i><span>Visual storytelling</span><i>▮</i>
-        </span>
-      </div>
-    </div>
 
     <!-- ============ STUDIO ============ -->
     <section class="section studio" id="studio" aria-label="The studio">
@@ -242,33 +209,65 @@
     </section>
 
     <!-- ============ GRAPHIC DESIGN ============ -->
-    <section class="section design-work" id="design" aria-label="Graphic design portfolio">
+    <section class="section design-work" id="design" aria-label="Selected graphic design work">
       <div class="section-head reveal-line">
-        <p class="mono section-label"><span class="label-index">03</span>Graphic design</p>
+        <p class="mono section-label"><span class="label-index">03</span>Selected design work</p>
         <hr class="head-rule" />
       </div>
+
+      <article class="identity-feature reveal-fade" aria-labelledby="kaeduas-app-title">
+        <figure class="identity-photo">
+          <img src="./design-work/kaeduas-applications-branded.jpg" alt="Photographic mockup showing the Kaeduas strata identity applied to a dark studio shirt and a bone-coloured mailer box" loading="lazy" />
+          <figcaption class="mono">KAEDUAS · STUDIO GOODS / APPLICATION STUDY</figcaption>
+        </figure>
+        <div class="identity-copy">
+          <p class="mono identity-index">01 / KAEDUAS IDENTITY</p>
+          <h2 id="kaeduas-app-title">Made to live beyond the screen.</h2>
+          <p>The Kaeduas strata mark, carried onto studio apparel and a simple mailer. A self-initiated application study of the identity across physical touchpoints.</p>
+          <p class="mono identity-disclosure">Photographic mockup · concept application, not merchandise for sale</p>
+        </div>
+      </article>
+
       <div class="design-heading-row">
-        <h2 class="section-title split-title">One concept, five useful formats.</h2>
-        <p class="design-hint mono">ORUVI · fictional brand concept · scroll <span aria-hidden="true">→</span></p>
+        <div>
+          <p class="mono identity-index">02 / ORUVI · SELF-INITIATED SPEC CONCEPT</p>
+          <h2 class="section-title">One idea, five applications.</h2>
+        </div>
+        <p class="design-hint mono">Swipe to explore <span aria-hidden="true">→</span></p>
       </div>
-      <div class="design-rail" tabindex="0" aria-label="Graphic design formats. Scroll horizontally to explore five categories.">
-        <article class="design-card"><div class="design-art art-digital"><img class="design-art-image" src="./design-work/digital.svg" alt="Digital design portfolio artwork" loading="lazy" /><span class="art-tag mono">01 / SCREEN</span><span class="art-title">Digital<br><em>design</em></span><span class="art-caption mono">Social · web · campaign</span><span class="art-shape" aria-hidden="true"></span></div><h3>Digital <span>· Social campaign</span></h3></article>
-        <article class="design-card"><div class="design-art art-print"><img class="design-art-image" src="./design-work/print.svg" alt="Print design portfolio artwork" loading="lazy" /><span class="art-tag mono">02 / PAPER</span><span class="art-title">Print<br><em>with purpose</em></span><span class="art-caption mono">Poster · editorial · collateral</span><span class="art-shape" aria-hidden="true"></span></div><h3>Print <span>· Launch poster</span></h3></article>
-        <article class="design-card"><div class="design-art art-packaging"><img class="design-art-image" src="./design-work/packaging.svg" alt="Packaging design portfolio artwork" loading="lazy" /><span class="art-tag mono">03 / OBJECT</span><span class="art-title">Made to<br><em>be held</em></span><span class="art-caption mono">Packaging · labels · unboxing</span><span class="art-shape" aria-hidden="true"></span></div><h3>Packaging <span>· Can family</span></h3></article>
-        <article class="design-card"><div class="design-art art-pos"><img class="design-art-image" src="./design-work/point-of-sale.svg" alt="Point-of-sale design portfolio artwork" loading="lazy" /><span class="art-tag mono">04 / IN STORE</span><span class="art-title">Right at<br><em>the point</em></span><span class="art-caption mono">Point-of-sale · display</span><span class="art-shape" aria-hidden="true"></span></div><h3>Point-of-sale <span>· Counter display</span></h3></article>
-        <article class="design-card"><div class="design-art art-retail"><img class="design-art-image" src="./design-work/retail-activation.svg" alt="Retail activation design portfolio artwork" loading="lazy" /><span class="art-tag mono">05 / EXPERIENCE</span><span class="art-title">Step into<br><em>the story</em></span><span class="art-caption mono">Retail · activation · environment</span><span class="art-shape" aria-hidden="true"></span></div><h3>Retail activation <span>· Sampling moment</span></h3></article>
+      <div class="design-rail" tabindex="0" aria-label="ORUVI brand concept applications. Scroll horizontally to explore digital, print, packaging, point-of-sale and retail activation.">
+        <article class="design-card">
+          <figure class="design-art"><img class="design-art-image" src="./design-work/oruvi-digital.jpg" alt="ORUVI botanical soda digital campaign, with a photographic can lineup and social-first headline" loading="lazy" /></figure>
+          <h3>Digital <span>· Social campaign</span></h3>
+        </article>
+        <article class="design-card">
+          <figure class="design-art"><img class="design-art-image" src="./design-work/oruvi-print.jpg" alt="ORUVI botanical soda launch poster with editorial typography and product photography" loading="lazy" /></figure>
+          <h3>Print <span>· Launch poster</span></h3>
+        </article>
+        <article class="design-card">
+          <figure class="design-art"><img class="design-art-image" src="./design-work/oruvi-packaging.jpg" alt="Photographic mockup of ORUVI grapefruit and buchu botanical soda cans with finished labels" loading="lazy" /></figure>
+          <h3>Packaging <span>· Can family</span></h3>
+        </article>
+        <article class="design-card design-card--wide">
+          <figure class="design-art"><img class="design-art-image" src="./design-work/oruvi-point-of-sale.jpg" alt="Photographic ORUVI countertop display in a specialty grocer" loading="lazy" /></figure>
+          <h3>Point-of-sale <span>· Counter display</span></h3>
+        </article>
+        <article class="design-card design-card--wide">
+          <figure class="design-art"><img class="design-art-image" src="./design-work/oruvi-retail-branded.jpg" alt="ORUVI tasting bar concept at a contemporary food market, with shoppers sampling the drink" loading="lazy" /></figure>
+          <h3>Retail activation <span>· Tasting experience</span></h3>
+        </article>
       </div>
       <div class="brand-book-samples">
         <div class="brand-book-heading">
           <p class="mono">Brand books · PDF samples</p>
-          <p>See how the identity is documented, then applied.</p>
+          <p>See the thinking behind each identity, then how it carries through.</p>
         </div>
         <a class="brand-book-link" href="./downloads/Kaeduas_Creative_Brand_Guide_v02.pdf" download>
           <span class="mono">KAEDUAS · CREATIVE BRAND GUIDE</span>
           <strong>Download the Kaeduas guide <span aria-hidden="true">↗</span></strong>
         </a>
-        <a class="brand-book-link" href="./downloads/ORUVI_Fictional_Brand_Concept_Guide.pdf" download>
-          <span class="mono">ORUVI · FICTIONAL BRAND CONCEPT</span>
+        <a class="brand-book-link" href="./downloads/ORUVI_Spec_Concept_Brand_Guide.pdf" download>
+          <span class="mono">ORUVI · SELF-INITIATED SPEC CONCEPT</span>
           <strong>Download the concept guide <span aria-hidden="true">↗</span></strong>
         </a>
       </div>
@@ -332,19 +331,19 @@
           <span class="mono brief-key">The brief</span>
           <textarea name="brief" rows="4" placeholder="Objective, platform, deadline, anything useful. Files and links can go in the email this opens."></textarea>
         </label>
-        <button class="btn btn-ember magnetic" type="submit">
+        <button class="btn btn-ember" type="submit">
           <span>Send the brief</span>
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <p class="mono brief-note">Opens your email app with everything pre-filled. Nothing is stored on this site.</p>
       </form>
       <div class="action-grid">
-        <a class="action-tile action-primary magnetic-soft reveal-fade" href="mailto:motsamai.main@gmail.com?subject=Project%20brief%20for%20Kaeduas">
+        <a class="action-tile action-primary reveal-fade" href="mailto:motsamai.main@gmail.com?subject=Project%20brief%20for%20Kaeduas">
           <span class="mono action-key">EMAIL</span>
           <span class="action-val action-val-sm">motsamai.main@gmail.com</span>
           <span class="mono action-note">Best for briefs &amp; files</span>
         </a>
-        <a class="action-tile magnetic-soft reveal-fade" href="https://wa.me/27672363235?text=Hi%20QJ%2C%20I%20have%20a%20project%20for%20Kaeduas." target="_blank" rel="noopener">
+        <a class="action-tile reveal-fade" href="https://wa.me/27672363235?text=Hi%20QJ%2C%20I%20have%20a%20project%20for%20Kaeduas." target="_blank" rel="noopener">
           <span class="mono action-key">WHATSAPP</span>
           <span class="action-val">+27 67 236 3235</span>
           <span class="mono action-note">Fastest response</span>

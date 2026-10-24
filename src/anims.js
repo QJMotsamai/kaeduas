@@ -1,5 +1,5 @@
 // ==========================================================================
-// KAEDUAS — Scroll & entrance choreography (GSAP + ScrollTrigger)
+// KAEDUAS — restrained entrance and scroll choreography
 // ==========================================================================
 
 import { gsap } from 'gsap';
@@ -42,7 +42,7 @@ function splitWords(el) {
   return el.querySelectorAll('.wi');
 }
 
-/** Hero entrance — called once the preloader lifts. */
+/** Brief, restrained entrance to the photographic opening. */
 export function heroIntro() {
   if (reduced) return;
 
@@ -74,16 +74,7 @@ export function heroIntro() {
 }
 
 /** Everything driven by scroll position. */
-export function initScrollAnims(webgl) {
-  // Hero canvas reacts to scroll even if ScrollTrigger-only animations are off
-  ScrollTrigger.create({
-    trigger: '.hero',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: true,
-    onUpdate: (self) => webgl.setScroll(self.progress)
-  });
-
+export function initScrollAnims() {
   if (reduced) return;
 
   // Section rules draw in
@@ -124,26 +115,6 @@ export function initScrollAnims(webgl) {
       }
     );
   });
-
-  // Studio statement — words ignite as you scroll through (scrubbed)
-  const statement = document.querySelector('.statement');
-  if (statement) {
-    const words = splitWords(statement);
-    gsap.fromTo(words,
-      { opacity: 0.14 },
-      {
-        opacity: 1,
-        ease: 'none',
-        stagger: 0.06,
-        scrollTrigger: {
-          trigger: statement,
-          start: 'top 78%',
-          end: 'bottom 42%',
-          scrub: true
-        }
-      }
-    );
-  }
 
   // Generic fade-ups
   gsap.utils.toArray('.reveal-fade').forEach((el) => {
@@ -194,25 +165,4 @@ export function initScrollAnims(webgl) {
     }
   );
 
-  // Slight skew on work cards with scroll velocity — the "reactive" feel
-  const proxy = { skew: 0 };
-  const skewSetters = gsap.utils.toArray('.work-media').map((el) => gsap.quickSetter(el, 'skewY', 'deg'));
-  ScrollTrigger.create({
-    trigger: '.work-list',
-    start: 'top bottom',
-    end: 'bottom top',
-    onUpdate: (self) => {
-      const skew = gsap.utils.clamp(-4, 4, self.getVelocity() / -350);
-      if (Math.abs(skew) > Math.abs(proxy.skew)) {
-        proxy.skew = skew;
-        gsap.to(proxy, {
-          skew: 0,
-          duration: 0.7,
-          ease: 'power3',
-          overwrite: true,
-          onUpdate: () => skewSetters.forEach((set) => set(proxy.skew))
-        });
-      }
-    }
-  });
 }

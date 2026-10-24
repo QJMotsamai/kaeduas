@@ -1,64 +1,10 @@
 // ==========================================================================
-// KAEDUAS — Interface behaviors: cursor, magnetism, menu, video facades
+// KAEDUAS — Interface behaviors: navigation, video facades and local time
 // ==========================================================================
 
 import { gsap } from 'gsap';
 
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-/* ---------- Custom cursor ---------- */
-
-export function initCursor() {
-  if (!finePointer || reduced) return;
-
-  const root = document.querySelector('.cursor');
-  const dot = root.querySelector('.cursor-dot');
-  const ring = root.querySelector('.cursor-ring');
-
-  gsap.set([dot, ring], { xPercent: -50, yPercent: -50, x: -100, y: -100 });
-
-  const dotX = gsap.quickTo(dot, 'x', { duration: 0.12, ease: 'power2.out' });
-  const dotY = gsap.quickTo(dot, 'y', { duration: 0.12, ease: 'power2.out' });
-  const ringX = gsap.quickTo(ring, 'x', { duration: 0.45, ease: 'power3.out' });
-  const ringY = gsap.quickTo(ring, 'y', { duration: 0.45, ease: 'power3.out' });
-
-  window.addEventListener('pointermove', (e) => {
-    dotX(e.clientX); dotY(e.clientY);
-    ringX(e.clientX); ringY(e.clientY);
-  }, { passive: true });
-
-  document.addEventListener('pointerover', (e) => {
-    const play = e.target.closest('.facade');
-    const link = e.target.closest('a, button, summary');
-    root.classList.toggle('is-play', !!play);
-    root.classList.toggle('is-link', !!link && !play);
-  });
-
-  document.addEventListener('pointerleave', () => gsap.to(root, { autoAlpha: 0, duration: 0.2 }));
-  document.addEventListener('pointerenter', () => gsap.to(root, { autoAlpha: 1, duration: 0.2 }));
-}
-
-/* ---------- Magnetic elements ---------- */
-
-export function initMagnetic() {
-  if (!finePointer || reduced) return;
-
-  document.querySelectorAll('.magnetic, .magnetic-soft').forEach((el) => {
-    const strength = el.classList.contains('magnetic') ? 0.35 : 0.16;
-    const xTo = gsap.quickTo(el, 'x', { duration: 0.5, ease: 'power3.out' });
-    const yTo = gsap.quickTo(el, 'y', { duration: 0.5, ease: 'power3.out' });
-
-    el.addEventListener('pointermove', (e) => {
-      const r = el.getBoundingClientRect();
-      xTo((e.clientX - (r.left + r.width / 2)) * strength);
-      yTo((e.clientY - (r.top + r.height / 2)) * strength);
-    });
-    el.addEventListener('pointerleave', () => {
-      gsap.to(el, { x: 0, y: 0, duration: 0.9, ease: 'elastic.out(1, 0.4)' });
-    });
-  });
-}
 
 /* ---------- Mobile menu ---------- */
 
@@ -163,7 +109,7 @@ export function initToTop(scrollTop) {
 }
 
 
-/* ---------- Replaceable graphic-design previews ---------- */
+/* ---------- Horizontal photographic design gallery ---------- */
 
 export function initDesignGallery() {
   document.querySelectorAll('.design-art-image').forEach((img) => {

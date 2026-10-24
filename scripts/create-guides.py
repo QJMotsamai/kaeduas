@@ -15,7 +15,7 @@ from reportlab.lib.styles import ParagraphStyle
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "downloads"
-ART = ROOT / "scratch" / "render"
+ART = ROOT / "public" / "design-work"
 OUT.mkdir(parents=True, exist_ok=True)
 W, H = A4
 FONT = Path("/usr/share/fonts/truetype/dejavu")
@@ -83,7 +83,7 @@ def base_page(c, dark=True, label="", page=1, total=8):
     c.line(48, 38, W - 48, 38)
     c.setFillColor(mute)
     c.setFont("BookMono", 7)
-    c.drawString(48, 24, "KAEDUAS  /  CREATIVE PRACTICE" if dark else "ORUVI  /  FICTIONAL BRAND STUDY")
+    c.drawString(48, 24, "KAEDUAS  /  CREATIVE PRACTICE" if dark else "ORUVI  /  SELF-INITIATED SPEC CONCEPT")
     c.drawRightString(W - 48, 24, f"{page:02d}  /  {total:02d}")
     return main, mute, accent
 
@@ -248,21 +248,20 @@ def kaeduas_book(path):
     c.showPage()
     # 07 Application preview
     base_page(c, True, "06 — In use", 7)
-    heading(c, "One identity.\nMany useful formats.", size=27)
-    app = [
-      ("DIGITAL", "A clear hook; designed for the feed, not shrunk from a poster."),
-      ("PRINT", "Hierarchy that holds at a glance and rewards a closer look."),
-      ("PACKAGING", "A distinctive shelf read, with useful information still easy to find."),
-      ("POINT-OF-SALE", "A direct message at the decision point."),
-      ("RETAIL", "An environment people can recognise, move through and remember."),
-    ]
-    positions = [(48, H - 302), (315, H - 302), (48, H - 447), (315, H - 447), (48, H - 592)]
-    for (title, body), (x, y) in zip(app, positions):
-        c.setFillColor(CARBON); c.roundRect(x, y - 103, 232, 121, 4, fill=1, stroke=0)
-        strata(c, x + 15, y - 16, .36, EMBER if title != "PRINT" else BONE)
-        c.setFillColor(BONE); c.setFont("BookMono", 8); c.drawString(x + 15, y - 48, title)
-        para(c, body, x + 15, y - 58, 201, size=7.5, leading=10)
-    c.setFillColor(ASH); c.setFont("BookSerif", 11); c.drawString(315, H - 661, "Concept examples are labelled as concepts.")
+    heading(c, "One identity.\nMade to live beyond the screen.", size=26)
+    image_contain(c, ART / "kaeduas-applications-branded.jpg", 48, H - 465, W - 96, 272, CARBON)
+    label(c, "KAEDUAS · STUDIO GOODS / APPLICATION STUDY", 48, H - 492, EMBER)
+    para(c, "The strata identity carried onto studio apparel and a mailer. A self-initiated photographic mockup showing how the Kaeduas system can move into physical touchpoints.", 48, H - 516, W - 96, size=9.5, leading=14)
+    rule(c, 48, 248, W - 96)
+    label(c, "Application decisions", 48, 226)
+    for x, title, body in [
+      (48, "APPAREL", "A strong, simple mark on dark fabric."),
+      (220, "PACKAGING", "Bone stock keeps the mailer quiet."),
+      (392, "IDENTITY", "The Strata lockup stays intact."),
+    ]:
+        label(c, title, x, 197, EMBER, 7)
+        para(c, body, x, 181, 145, size=7.5, leading=10)
+    c.setFillColor(ASH); c.setFont("BookSerif", 11); c.drawString(48, 83, "The full system stays consistent from screen to object.")
     c.showPage()
     # 08 Close
     base_page(c, True, "07 — Commission a guide", 8)
@@ -279,7 +278,7 @@ def kaeduas_book(path):
 
 def oruvi_book(path):
     c = Canvas(str(path), pagesize=A4, pageCompression=1)
-    c.setTitle("ORUVI — Fictional Brand Concept Guide")
+    c.setTitle("ORUVI — Self-initiated Spec Concept Guide")
     c.setAuthor("Kaeduas · Qophe Junior Motsamai")
     # 01 Cover
     c.setFillColor(ORUVI_INK); c.rect(0, 0, W, H, fill=1, stroke=0)
@@ -288,16 +287,16 @@ def oruvi_book(path):
     c.setFillColor(ORUVI_CREAM); c.setFont("BookSans-Bold", 35); c.drawString(50, H - 280, "A LITTLE BRIGHTER.")
     c.setFillColor(ORUVI_LIME); c.setFont("BookSerif", 22); c.drawString(50, H - 318, "ORUVI  /  BOTANICAL SODA")
     c.setStrokeColor(ORUVI_LIME); c.line(50, H - 352, W - 50, H - 352)
-    c.setFillColor(ORUVI_CREAM); c.setFont("BookMono", 9); c.drawString(50, H - 384, "FICTIONAL BRAND CONCEPT  /  BRAND GUIDE")
-    image_contain(c, ART / "packaging.png", 302, 93, 244, 370)
-    c.setFillColor(ORUVI_CREAM); c.setFont("BookMono", 8); c.drawString(50, 62, "PORTFOLIO STUDY BY KAEDUAS  /  2026  /  NOT A REAL PRODUCT")
+    c.setFillColor(ORUVI_CREAM); c.setFont("BookMono", 9); c.drawString(50, H - 384, "SELF-INITIATED SPEC CONCEPT  /  BRAND GUIDE")
+    image_contain(c, ART / "oruvi-packaging.jpg", 302, 93, 244, 370)
+    c.setFillColor(ORUVI_CREAM); c.setFont("BookMono", 8); c.drawString(50, 62, "PORTFOLIO STUDY BY KAEDUAS  /  2026")
     c.showPage()
     # 02 Idea
     main, mute, accent = base_page(c, False, "01 — The idea", 2)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "01 — THE IDEA")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 30); c.drawString(48, H - 115, "A pause with a little sparkle.")
     label(c, "What it is", 48, H - 164, ORUVI_ORANGE)
-    para(c, "ORUVI is a fictional botanical soda concept for the in-between moments of a day: a bright, grown-up soft drink built around a grapefruit-and-buchu flavour idea.", 48, H - 185, W - 96, dark=False, size=11, leading=18)
+    para(c, "ORUVI is a self-initiated spec concept for a botanical soda brand: a bright, grown-up drink proposition built around grapefruit and buchu, for the in-between moments of a day.", 48, H - 185, W - 96, dark=False, size=11, leading=18)
     rule(c, 48, H - 278, W - 96, dark=False)
     label(c, "Positioning", 48, H - 310, ORUVI_ORANGE)
     c.setFillColor(ORUVI_INK); c.setFont("BookSerif", 20); c.drawString(48, H - 344, "An easy, bright break in a busy day.")
@@ -343,28 +342,28 @@ def oruvi_book(path):
     base_page(c, False, "04 — Digital & print", 5)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "04 — DIGITAL & PRINT")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 28); c.drawString(48, H - 108, "Give the idea room to land.")
-    image_contain(c, ART / "digital.png", 52, 199, 212, 450, ORUVI_LIME)
-    image_contain(c, ART / "print.png", 282, 199, 261, 450, ORUVI_INK)
-    label(c, "Digital", 52, 174, ORUVI_ORANGE)
-    label(c, "Print", 282, 174, ORUVI_ORANGE)
-    para(c, "One strong thought. One flavour cue. Built for a thumb-first feed.", 52, 157, 212, dark=False, size=8.5, leading=12)
-    para(c, "Bold type, generous margins and a simple citrus illustration that reads from a distance.", 282, 157, 260, dark=False, size=8.5, leading=12)
+    image_contain(c, ART / "oruvi-digital.jpg", 52, 304, 212, 345, ORUVI_LIME)
+    image_contain(c, ART / "oruvi-print.jpg", 282, 304, 261, 345, ORUVI_INK)
+    label(c, "Digital", 52, 280, ORUVI_ORANGE)
+    label(c, "Print", 282, 280, ORUVI_ORANGE)
+    para(c, "One strong thought. One flavour cue. Built for a thumb-first feed.", 52, 263, 212, dark=False, size=8.5, leading=12)
+    para(c, "A photographic poster with confident hierarchy, readable at a glance and considered up close.", 282, 263, 260, dark=False, size=8.5, leading=12)
     c.showPage()
     # 06 pack
     base_page(c, False, "05 — Packaging", 6)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "05 — PACKAGING")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 27); c.drawString(48, H - 109, "A distinctive can, easy to read.")
-    image_contain(c, ART / "packaging.png", 78, 100, 439, 580)
-    c.setFillColor(ORUVI_INK); c.setFont("BookSerif", 14); c.drawString(48, 78, "Three colourways; one recognisable family.")
+    image_contain(c, ART / "oruvi-packaging.jpg", 78, 100, 439, 580)
+    c.setFillColor(ORUVI_INK); c.setFont("BookSerif", 14); c.drawString(48, 78, "Three colourways; one photographic product family.")
     c.showPage()
     # 07 in-store
     base_page(c, False, "06 — In store", 7)
     c.setFillColor(ORUVI_ORANGE); c.setFont("BookMono", 8); c.drawString(48, H - 43, "06 — IN STORE")
     c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 28); c.drawString(48, H - 109, "The brand, in the room.")
-    image_contain(c, ART / "point-of-sale.png", 48, 125, 242, 521)
-    image_contain(c, ART / "retail-activation.png", 306, 125, 242, 521)
-    label(c, "Point-of-sale", 48, 100, ORUVI_ORANGE)
-    label(c, "Retail activation", 306, 100, ORUVI_ORANGE)
+    image_contain(c, ART / "oruvi-point-of-sale.jpg", 48, H - 390, W - 96, 242, ORUVI_PALE)
+    label(c, "Point-of-sale · counter display", 48, H - 414, ORUVI_ORANGE)
+    image_contain(c, ART / "oruvi-retail-branded.jpg", 48, H - 678, W - 96, 242, ORUVI_PALE)
+    label(c, "Retail activation · tasting experience", 48, H - 702, ORUVI_ORANGE)
     c.showPage()
     # 08 scope and disclosure
     base_page(c, False, "07 — Concept notes", 8)
@@ -381,11 +380,11 @@ def oruvi_book(path):
         c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 9); c.drawString(48,y,t)
         c.setFillColor(colors.HexColor("#69746B")); c.setFont("BookSans", 9); c.drawString(195,y,d)
     c.setFillColor(colors.HexColor("#F7E2DC")); c.roundRect(48, 80, W-96, 126, 5, fill=1, stroke=0)
-    c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 10); c.drawString(64, 181, "FICTIONAL PORTFOLIO CONCEPT")
-    para(c, "ORUVI, its product, packaging, flavour description and campaign are invented for this design study. It is not a real company or product and is not available for purchase. Any future commercial use would need its own name, claims and trademark checks.", 64, 166, W-128, dark=False, size=8.5, leading=12, color=ORUVI_INK)
+    c.setFillColor(ORUVI_INK); c.setFont("BookSans-Bold", 10); c.drawString(64, 181, "SELF-INITIATED SPEC CONCEPT · NOT CLIENT WORK")
+    para(c, "ORUVI and the product proposition are portfolio-only concept work, not a commissioned client project. The product is not on sale. Name, formulation, claims and trademark clearance would need to be resolved before any commercial use.", 64, 166, W-128, dark=False, size=8.5, leading=12, color=ORUVI_INK)
     c.showPage(); c.save()
 
 
 kaeduas_book(OUT / "Kaeduas_Creative_Brand_Guide_v02.pdf")
-oruvi_book(OUT / "ORUVI_Fictional_Brand_Concept_Guide.pdf")
+oruvi_book(OUT / "ORUVI_Spec_Concept_Brand_Guide.pdf")
 print("Created two portfolio brand guides in", OUT)
