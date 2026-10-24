@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600">
+    <rect width="480" height="600" fill="#F4EFDF"/>
+    <rect x="20" y="20" width="440" height="560" fill="none" stroke="#183C34" stroke-width="1.5"/>
+    <rect x="20" y="20" width="440" height="12" fill="#E65B3A"/>
+    <g transform="translate(44 96)" fill="#183C34">
+    <circle cx="19" cy="0" r="17" fill="none" stroke="#183C34" stroke-width="1.7"/>
+    <path d="M8 3C11 -7 22 -10 30 -5C28 5 18 10 8 3Z"/>
+    <path d="M9 3L29 -5" stroke="#183C34" stroke-width="1.3" fill="none"/>
+    <text x="49" y="8" font-family="Archivo,Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="4" fill="#183C34">ORUVI</text>
+  </g>
+    <text x="44" y="159" font-family="'JetBrains Mono',Consolas,monospace" font-size="10" letter-spacing="2" fill="#69746B">BOTANICAL SODA / LAUNCH POSTER</text>
+    <text x="44" y="274" font-family="Archivo,Arial,sans-serif" font-size="45" font-weight="600" letter-spacing="-1.8" fill="#183C34">A PAUSE</text>
+    <text x="44" y="338" font-family="'Instrument Serif',Georgia,serif" font-size="62" font-style="italic" fill="#183C34">with a little</text>
+    <text x="44" y="414" font-family="Archivo,Arial,sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#E65B3A">SPARKLE.</text>
+    <path d="M44 451H436" stroke="#183C34" stroke-width="1"/>
+    <text x="44" y="495" font-family="'JetBrains Mono',Consolas,monospace" font-size="11" letter-spacing="1.6" fill="#183C34">GRAPEFRUIT + BUCHU</text>
+    <text x="44" y="536" font-family="'JetBrains Mono',Consolas,monospace" font-size="9" letter-spacing="1.4" fill="#69746B">SELF-INITIATED SPEC CONCEPT</text>
+  </svg>
